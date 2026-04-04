@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title id="page-title">РљР°С‚РµРіРѕСЂРёСЏ вЂ” Home UA</title>
-  <meta name="description" content="РљР°С‚Р°Р»РѕРі С‚РѕРІР°СЂРѕРІ РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅР° Home UA вЂ” РґРµРєРѕСЂ, РїРѕСЃСѓРґР°, РјРµР±РµР»СЊ РѕС‚ РІРµРґСѓС‰РёС… РµРІСЂРѕРїРµР№СЃРєРёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№."/>
+  <title id="page-title">Категория — Home RU</title>
+  <meta name="description" content="Каталог товаров интернет-магазина Home RU — декор, посуда, мебель от ведущих европейских производителей."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -16,95 +16,104 @@
 <main class="page-main">
   <div class="container">
     <nav class="breadcrumb">
-      <a href="index.html">Р“Р»Р°РІРЅР°СЏ</a>
-      <span>вЂє</span>
-      <span id="breadcrumb-cat">РљР°С‚РµРіРѕСЂРёСЏ</span>
+      <a href="index.html">Главная</a>
+      <span>›</span>
+      <span id="breadcrumb-cat">Категория</span>
     </nav>
 
     <div class="page-layout">
       <!-- Sidebar -->
       <aside class="page-sidebar">
         <div class="sidebar-block cat-filter-block">
-          <span class="cat-filter-title">РљРђРўР•Р“РћР РР</span>
+          <span class="cat-filter-title">КАТЕГОРИИ</span>
           <ul class="cat-filter-list" id="cat-filter-list">
-            <li><a href="category.html?cat=gifts">РџРѕРґР°СЂРєРё</a></li>
-            <li><a href="category.html?cat=candles">РЎРІРµС‡Рё Рё Р°СЂРѕРјР°С‚РЅС‹Рµ СЃС‚РёРєРё</a></li>
-            <li><a href="category.html?cat=dishes">РџРѕСЃСѓРґР°</a></li>
-            <li><a href="category.html?cat=decor">Р”РµРєРѕСЂ</a></li>
-            <li><a href="category.html?cat=lighting">РћСЃРІРµС‰РµРЅРёРµ</a></li>
-            <li><a href="category.html?cat=textile">РўРµРєСЃС‚РёР»СЊ</a></li>
-            <li><a href="category.html?cat=furniture">РњРµР±РµР»СЊ</a></li>
-            <li><a href="category.html?cat=mirrors">Р—РµСЂРєР°Р»Р°</a></li>
-            <li><a href="category.html?cat=vases">Р¦РІРµС‚РѕС‡РЅС‹Рµ РІР°Р·РѕРЅС‹</a></li>
-            <li><a href="category.html?cat=figurines">РЎС‚Р°С‚СѓСЌС‚РєРё</a></li>
-            <li><a href="category.html?cat=frames">Р¤РѕС‚РѕСЂР°РјРєРё</a></li>
-            <li><a href="category.html?cat=jewelry">РҐСЂР°РЅРµРЅРёРµ СѓРєСЂР°С€РµРЅРёР№</a></li>
-            <li><a href="category.html?cat=new">РќРѕРІС‹Рµ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ</a></li>
+            <li><a href="category.html?cat=gifts">Подарки</a></li>
+            <li><a href="category.html?cat=candles">Свечи</a></li>
+            <li><a href="category.html?cat=lighting">Освещение</a></li>
+            <li><a href="category.html?cat=furniture">Мебель</a></li>
+            <li><a href="category.html?cat=mirrors">Зеркала</a></li>
+            <li><a href="category.html?cat=vases">Вазоны</a></li>
+            <li><a href="category.html?cat=dishes">Посуда</a></li>
+            <li><a href="category.html?cat=decor">Декор</a></li>
+            <li><a href="category.html?cat=textile">Текстиль</a></li>
+            <li><a href="category.html?cat=figurines">Статуэтки</a></li>
+            <li><a href="category.html?cat=frames">Фоторамки</a></li>
+            <li><a href="category.html?cat=jewelry">Украшения</a></li>
           </ul>
         </div>
 
         <div class="sidebar-block">
-          <span class="cat-filter-title">Р¤РР›Р¬РўР  Р¦Р•РќР«</span>
+          <h3 class="sidebar-title accent-title">ФИЛЬТР ЦЕНЫ</h3>
           <div class="price-filter">
             <div class="price-range-row">
-              <span>РѕС‚</span>
+              <span>от</span>
               <input type="number" id="price-from" value="0" min="0" class="price-input"/>
-              <span>РґРѕ</span>
+              <span>до</span>
               <input type="number" id="price-to" value="50000" min="0" class="price-input"/>
-              <span>в‚ґ</span>
+              <span>₽</span>
             </div>
-            <input type="range" id="price-slider" min="0" max="50000" value="50000" class="price-slider"/>
-            <button class="filter-btn" onclick="applyPriceFilter()">РџР РРњР•РќРРўР¬</button>
+            <button class="filter-btn" onclick="applyCatFilters()">ПРИМЕНИТЬ</button>
           </div>
         </div>
 
-        <div class="sidebar-block sidebar-rating">
-          <h3 class="sidebar-title accent-title pink">РћР¦Р•РќРљР РњРђР“РђР—РРќРђ</h3>
-          <p class="rating-label">РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° РјР°РіР°Р·РёРЅР°</p>
-          <div class="rating-score">5</div>
-          <div class="rating-stars">в…в…в…в…в…</div>
-          <p class="rating-count">Р’СЃРµРіРѕ РѕС†РµРЅРѕРє: 4</p>
-          <div class="reviews-list">
-            <div class="review-item">
-              <strong>РњР°СЂРёРЅР°</strong><span class="review-stars">в…в…в…в…в…</span>
-              <p>РЎРїР°СЃРёР±Рѕ Р·Р° РґРѕСЃС‚Р°РІРєСѓ РґРµРЅСЊ-РІ-РґРµРЅСЊ!</p>
-            </div>
-            <div class="review-item">
-              <strong>Р•РєР°С‚РµСЂРёРЅР°</strong><span class="review-stars">в…в…в…в…в…</span>
-              <p>РЁРёРєР°СЂРЅРѕРµ РєР°С‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР°!</p>
-            </div>
+        <div class="sidebar-block sidebar-recommended">
+          <h3 class="sidebar-title accent-title">ИНТЕРЕСНОЕ</h3>
+          <div class="sidebar-products">
+            <a href="product.html?id=vase-amadeus" class="sidebar-product">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=80&q=80" alt="Ваза"/>
+              <div class="sidebar-product-info">
+                <span class="sidebar-product-name">Ваза AMADEUS...</span>
+                <span class="sidebar-product-price">1 870 ₽</span>
+              </div>
+            </a>
+            <a href="product.html?id=lamp-floor" class="sidebar-product">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="Лампа"/>
+              <div class="sidebar-product-info">
+                <span class="sidebar-product-name">Торшер J-LINE...</span>
+                <span class="sidebar-product-price">13 530 ₽</span>
+              </div>
+            </a>
           </div>
-          <a href="#" class="btn-reviews">РџРћРЎРњРћРўР Р•РўР¬ РћРўР—Р«Р’Р«</a>
         </div>
       </aside>
 
-      <!-- Main Content -->
+      <!-- Content -->
       <article class="page-content">
-        <div class="content-header category-top">
+        <div class="content-header">
           <span class="section-accent"></span>
-          <h1 class="content-title" id="category-title">Р—Р°РіСЂСѓР·РєР°...</h1>
+          <h1 class="content-title" id="cat-title">КАТЕГОРИЯ</h1>
         </div>
-        <p class="category-description" id="category-desc"></p>
 
-        <div class="sale-toolbar">
-          <span class="sale-count" id="cat-count">Р—Р°РіСЂСѓР·РєР°...</span>
-          <div class="sort-wrap">
-            <label>РЎРѕСЂС‚РёСЂРѕРІРєР°:</label>
-            <select id="sort-select" onchange="sortCatProducts(this.value)" class="sort-select">
-              <option value="default">РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</option>
-              <option value="price-asc">Р¦РµРЅР° (РІРѕР·СЂР°СЃС‚Р°РЅРёРµ)</option>
-              <option value="price-desc">Р¦РµРЅР° (СѓР±С‹РІР°РЅРёРµ)</option>
-              <option value="name-asc">РќР°Р·РІР°РЅРёРµ (Рђ-РЇ)</option>
+        <div class="cat-toolbar">
+          <div class="cat-display-options">
+            <button class="display-btn active" id="view-grid">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </button>
+            <button class="display-btn" id="view-list">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            </button>
+          </div>
+          <div class="cat-sort">
+            <label>Сортировка:</label>
+            <select id="sort-select" onchange="applyCatFilters()" class="sort-select">
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Цена (минимум)</option>
+              <option value="price-desc">Цена (максимум)</option>
+              <option value="name-asc">Название (А-Я)</option>
             </select>
           </div>
         </div>
 
-        <div class="products-grid-category" id="category-products">
-          <!-- Products injected by JS -->
+        <div class="products-grid" id="category-products">
+          <!-- Товары будут вставлены JS -->
         </div>
 
-        <div class="pagination" id="pagination">
-          <!-- Pagination injected by JS -->
+        <!-- Pagination -->
+        <div class="pagination-wrap">
+          <div class="pagination-info" id="pagination-info">Показано 1 из 1 страниц (всего 1 товаров)</div>
+          <div class="pagination" id="pagination-list">
+            <!-- JS -->
+          </div>
         </div>
       </article>
     </div>
@@ -113,308 +122,88 @@
 
 <div id="site-footer-placeholder"></div>
 <script src="components.js"></script>
+<script src="product.js"></script>
 <script>
-// Category definitions (Russian)
-const CATEGORIES = {
-  gifts: {
-    name: 'РџРѕРґР°СЂРєРё',
-    desc: 'РќРµРїРѕРІС‚РѕСЂРёРјС‹Рµ РїРѕРґР°СЂРєРё РѕС‚ РІРµРґСѓС‰РёС… РµРІСЂРѕРїРµР№СЃРєРёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ РґР»СЏ Р»СЋР±РѕРіРѕ РїСЂР°Р·РґРЅРёРєР°.',
-    products: [
-      { name: 'РџРѕРґСЃРІРµС‡РЅРёРє J-LINE СЃС‚РµРєР»СЏРЅРЅС‹Р№ СЃ РѕР±СЉС‘РјРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё', price: 825, img: 'https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80' },
-      { name: 'РђСЂРѕРјР°РґРёС„С„СѓР·РѕСЂ J-LINE РІРѕСЃС‚РѕС‡РЅС‹Р№ Р°СЂРѕРјР°С‚ 200 РјР» Р‘РµР»СЊРіРёСЏ', price: 2470, img: 'https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80' },
-      { name: 'РќРѕС‡РЅРёРє AMADEUS РІ С„РѕСЂРјРµ РїР°РєРµС‚Р° РєСЂРµРјРѕРІРѕРіРѕ С†РІРµС‚Р°', price: 2710, img: 'https://images.unsplash.com/photo-1513506003901-1e6a35294aa7?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЃРµСЂРµР±СЂСЏРЅР°СЏ 13x18 СЃРј Р‘РµР»СЊРіРёСЏ', price: 680, img: 'https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80' },
-      { name: 'Р’Р°Р·Р° СЃ СЂСѓС‡РєРѕР№ AMADEUS СЃ РїРѕС‚С‘РєР°РјРё РєСЂР°СЃРєРё 19 СЃРј Р¤СЂР°РЅС†РёСЏ', price: 1870, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE Р±Р°СЃРєРµС‚Р±РѕР»РёСЃС‚ Р±РµР»Р°СЏ 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80' },
-      { name: 'РќР°Р±РѕСЂ СЃРІРµС‡РµР№ AMADEUS РєРѕРЅРёС‡РµСЃРєРёС… Р±РµР»С‹С… 6 С€С‚.', price: 380, img: 'https://images.unsplash.com/photo-1510628314174-f3640cec3069?w=400&q=80' },
-      { name: 'РџРѕРґСЃС‚Р°РІРєР° РґР»СЏ РєРѕР»РµС† J-LINE РєРµСЂР°РјРёРєР° РґРµСЂРµРІРѕ', price: 980, img: 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&q=80' },
-      { name: 'Р”РµРєРѕСЂР°С‚РёРІРЅР°СЏ РІР°Р·Р° РєРµСЂР°РјРёС‡РµСЃРєР°СЏ СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° 30 СЃРј', price: 3240, img: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80' },
-    ]
-  },
-  candles: {
-    name: 'РЎРІРµС‡Рё Рё Р°СЂРѕРјР°С‚РЅС‹Рµ СЃС‚РёРєРё',
-    desc: 'РђСЂРѕРјР°С‚РЅС‹Рµ СЃРІРµС‡Рё Рё РґРёС„С„СѓР·РѕСЂС‹ РѕС‚ Р»СѓС‡С€РёС… РµРІСЂРѕРїРµР№СЃРєРёС… С„Р°Р±СЂРёРє РґР»СЏ РІР°С€РµРіРѕ РґРѕРјР°.',
-    products: [
-      { name: 'РџРѕРґСЃРІРµС‡РЅРёРє J-LINE СЃС‚РµРєР»СЏРЅРЅС‹Р№ СЃ РѕР±СЉС‘РјРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё РІС‹СЃРѕС‚Р° 20 СЃРј', price: 825, img: 'https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80' },
-      { name: 'РђСЂРѕРјР°РґРёС„С„СѓР·РѕСЂ J-LINE РІРѕСЃС‚РѕС‡РЅС‹Р№ Р°СЂРѕРјР°С‚ 200 РјР» Р‘РµР»СЊРіРёСЏ', price: 2470, img: 'https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80' },
-      { name: 'РђСЂРѕРјР°С‚РёС‡РµСЃРєР°СЏ СЃРІРµС‡Р° РІ СЃС‚Р°РєР°РЅРµ J-LINE Р»Р°РІР°РЅРґР° 130 Рі Р‘РµР»СЊРіРёСЏ', price: 560, img: 'https://images.unsplash.com/photo-1544681280-d5fd7dd9acec?w=400&q=80' },
-      { name: 'РђСЂРѕРјР°С‚РёС‡РµСЃРєРёРµ СЃС‚РёРєРё AMADEUS Р±Р°РјР±СѓРє 50 РјР» Р¤СЂР°РЅС†РёСЏ', price: 920, img: 'https://images.unsplash.com/photo-1515694346937-94d85e41e695?w=400&q=80' },
-      { name: 'РџРѕРґСЃРІРµС‡РЅРёРє J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р·РѕР»РѕС‚РёСЃС‚С‹Р№ РІС‹СЃРѕС‚Р° 15 СЃРј', price: 1150, img: 'https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=400&q=80' },
-      { name: 'РЎРІРµС‡Рё РєРѕРЅРёС‡РµСЃРєРёРµ AMADEUS РЅР°Р±РѕСЂ 6 С€С‚. Р±РµР»С‹Рµ', price: 380, img: 'https://images.unsplash.com/photo-1510628314174-f3640cec3069?w=400&q=80' },
-      { name: 'Р”РёС„С„СѓР·РѕСЂ J-LINE Р°СЂРѕРјР°С‚ СЂРѕР·С‹ 150 РјР» РџРѕР»СЊС€Р°', price: 1340, img: 'https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80' },
-      { name: 'РЎРІРµС‡Р° РїРёР»Р°СЂРЅР°СЏ AMADEUS С‚РµСЂСЂР°РєРѕС‚Р° 10 СЃРј', price: 290, img: 'https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80' },
-    ]
-  },
-  dishes: {
-    name: 'РџРѕСЃСѓРґР°',
-    desc: 'РЎС‚РµРєР»СЏРЅРЅР°СЏ, РєРµСЂР°РјРёС‡РµСЃРєР°СЏ Рё С„Р°СЂС„РѕСЂРѕРІР°СЏ РїРѕСЃСѓРґР° РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё, Р¤СЂР°РЅС†РёРё Рё РќРёРґРµСЂР»Р°РЅРґРѕРІ.',
-    products: [
-      { name: 'РљСѓРІС€РёРЅ СЃС‚РµРєР»СЏРЅРЅС‹Р№ РїСЂРѕР·СЂР°С‡РЅС‹Р№ РёР· Р±РѕСЂРѕСЃРёР»РёРєР°С‚Р° РЅРµР±СЊСЋС‰РёР№СЃСЏ', price: 2100, img: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80' },
-      { name: 'РљРѕР»СЊС†Р° РґР»СЏ СЃР°Р»С„РµС‚РѕРє J-LINE Р±Р°РјР±СѓРє РєРѕРјРїР»РµРєС‚ 6 С€С‚.', price: 880, img: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80' },
-      { name: 'РўР°СЂРµР»РєР° РєРµСЂР°РјРёС‡РµСЃРєР°СЏ AMADEUS СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° РґРёР°РјРµС‚СЂ 28 СЃРј', price: 1340, img: 'https://images.unsplash.com/photo-1463218648218-e3d5bde3b0e4?w=400&q=80' },
-      { name: 'Р§Р°С€РєР° J-LINE С„Р°СЂС„РѕСЂРѕРІР°СЏ СЃ Р±Р»СЋРґС†РµРј СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° 200 РјР»', price: 680, img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80' },
-      { name: 'РљСѓРІС€РёРЅ РєРµСЂР°РјРёРєР° AMADEUS РѕР»РёРІРєРѕРІС‹Р№ 1.2 Р» Р¤СЂР°РЅС†РёСЏ', price: 2380, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80' },
-      { name: 'Р”РѕСЃРєР° РґР»СЏ РїРѕРґР°С‡Рё РґРµСЂРµРІСЏРЅРЅР°СЏ J-LINE Р°РєР°С†РёСЏ 40Г—25 СЃРј', price: 1120, img: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=400&q=80' },
-      { name: 'Р‘РѕРєР°Р»С‹ J-LINE СЃС‚РµРєР»СЏРЅРЅС‹Рµ РЅР°Р±РѕСЂ 4 С€С‚.', price: 1580, img: 'https://images.unsplash.com/photo-1543255006-d6395b24f55a?w=400&q=80' },
-      { name: 'РњРёСЃРєР° РєРµСЂР°РјРёС‡РµСЃРєР°СЏ AMADEUS СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° 500 РјР»', price: 760, img: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80' },
-    ]
-  },
-  decor: {
-    name: 'Р”РµРєРѕСЂ',
-    desc: 'РЎРѕРІСЂРµРјРµРЅРЅС‹Р№ РґРµРєРѕСЂ РґР»СЏ РёРЅС‚РµСЂСЊРµСЂР° РѕС‚ РІРµРґСѓС‰РёС… РµРІСЂРѕРїРµР№СЃРєРёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ вЂ” СЃС‚Р°С‚СѓСЌС‚РєРё, РІР°Р·С‹, РєР°СЂС‚РёРЅС‹.',
-    products: [
-      { name: 'Р’Р°Р·Р° СЃ СЂСѓС‡РєРѕР№ AMADEUS СЃ РїРѕС‚С‘РєР°РјРё РєСЂР°СЃРєРё РІС‹СЃРѕС‚Р° 19 СЃРј Р¤СЂР°РЅС†РёСЏ', price: 1870, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE Р±Р°СЃРєРµС‚Р±РѕР»РёСЃС‚ Р±РµР»Р°СЏ 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE СЃ РіР°РЅС‚РµР»СЊСЋ Р±РµР»Р°СЏ 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Light&Living СЃРёР»СѓСЌС‚ РґРµРІСѓС€РєРё С‡С‘СЂРЅРѕРіРѕ С†РІРµС‚Р°', price: 6130, img: 'https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80' },
-      { name: 'Р”РµСЂР¶Р°С‚РµР»Рё РґР»СЏ РєРЅРёРі J-LINE Р·РµР»С‘РЅС‹Рµ РІ С„РѕСЂРјРµ РєСЂРѕРєРѕРґРёР»Р°', price: 3630, img: 'https://images.unsplash.com/photo-1589203832539-8014afcc5eba?w=400&q=80' },
-      { name: 'Р’Р°Р·Р° РґРµРєРѕСЂР°С‚РёРІРЅР°СЏ РєРµСЂР°РјРёС‡РµСЃРєР°СЏ СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° РІС‹СЃРѕС‚Р° 30 СЃРј', price: 3240, img: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80' },
-      { name: 'РљРѕРїРёР»РєР° J-LINE РІ С„РѕСЂРјРµ РјРёС€РєРё Р±РµР»Р°СЏ РєРµСЂР°РјРёРєР°', price: 1450, img: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80' },
-      { name: 'РџР°РЅРЅРѕ РЅР°СЃС‚РµРЅРЅРѕРµ AMADEUS Р°Р±СЃС‚СЂР°РєС†РёСЏ 40x60 СЃРј', price: 4800, img: 'https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80' },
-    ]
-  },
-  lighting: {
-    name: 'РћСЃРІРµС‰РµРЅРёРµ',
-    desc: 'РўРѕСЂС€РµСЂС‹, РїРѕРґРІРµСЃРЅС‹Рµ СЃРІРµС‚РёР»СЊРЅРёРєРё Рё Р±СЂР° РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё Рё РќРёРґРµСЂР»Р°РЅРґРѕРІ.',
-    products: [
-      { name: 'РўРѕСЂС€РµСЂ J-LINE РїР»РµС‚С‘РЅС‹Р№ РёР· СЂРѕС‚Р°РЅРіР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹Р№ РІС‹СЃРѕС‚Р° 133 СЃРј', price: 13530, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'РќРѕС‡РЅРёРє AMADEUS РІ С„РѕСЂРјРµ РїР°РєРµС‚Р° РєСЂРµРјРѕРІС‹Р№', price: 2710, img: 'https://images.unsplash.com/photo-1513506003901-1e6a35294aa7?w=400&q=80' },
-      { name: 'РўРѕСЂС€РµСЂ РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ J-LINE С‡С‘СЂРЅС‹Р№ РјР°С‚РѕРІС‹Р№ РІС‹СЃРѕС‚Р° 165 СЃРј', price: 8900, img: 'https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=400&q=80' },
-      { name: 'РќР°СЃС‚РѕР»СЊРЅР°СЏ Р»Р°РјРїР° AMADEUS РєРµСЂР°РјРёС‡РµСЃРєРѕРµ РѕСЃРЅРѕРІР°РЅРёРµ Р»СЊРЅСЏРЅРѕР№ Р°Р±Р°Р¶СѓСЂ', price: 5640, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'РџРѕРґРІРµСЃРЅРѕР№ СЃРІРµС‚РёР»СЊРЅРёРє J-LINE Р±Р°РјР±СѓРєРѕРІРѕРµ РїР»РµС‚РµРЅРёРµ РґРёР°РјРµС‚СЂ 40 СЃРј', price: 4200, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'Р‘СЂР° РЅР°СЃС‚РµРЅРЅРѕРµ Light&Living С‡С‘СЂРЅРѕРµ РјРµС‚Р°Р»Р» E27', price: 3750, img: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80' },
-      { name: 'РќР°СЃС‚РѕР»СЊРЅР°СЏ Р»Р°РјРїР° J-LINE СЃРѕ СЃС‚РµРєР»СЏРЅРЅС‹Рј РїР»Р°С„РѕРЅРѕРј РјРѕР»РѕС‡РЅС‹Р№', price: 6200, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'РЎРІРµС‚РёР»СЊРЅРёРє РїРѕС‚РѕР»РѕС‡РЅС‹Р№ AMADEUS РґРµСЂРµРІСЏРЅРЅС‹Р№ 3 РїР»Р°С„РѕРЅР°', price: 9400, img: 'https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=400&q=80' },
-    ]
-  },
-  textile: {
-    name: 'РўРµРєСЃС‚РёР»СЊ',
-    desc: 'РљР°С‡РµСЃС‚РІРµРЅРЅС‹Р№ РґРѕРјР°С€РЅРёР№ С‚РµРєСЃС‚РёР»СЊ вЂ” РїР»РµРґС‹, РїРѕРґСѓС€РєРё, РїРѕР»РѕС‚РµРЅС†Р° РѕС‚ Р»СѓС‡С€РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р•РІСЂРѕРїС‹.',
-    products: [
-      { name: 'РџРѕРєСЂС‹РІР°Р»Рѕ J-LINE С…Р»РѕРїРѕРє РїР»РµС‚С‘РЅРѕРµ Р±РµР¶РµРІРѕРµ 130Г—170 СЃРј', price: 3840, img: 'https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=400&q=80' },
-      { name: 'РџРѕРґСѓС€РєР° AMADEUS РґРµРєРѕСЂР°С‚РёРІРЅР°СЏ Р±Р°СЂС…Р°С‚РЅР°СЏ 45Г—45 СЃРј СЃРёРЅСЏСЏ', price: 1120, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'РџРѕР»РѕС‚РµРЅС†Рµ Р±Р°РЅРЅРѕРµ J-LINE 100% С…Р»РѕРїРѕРє 70Г—140 СЃРј РєСЂРµРјРѕРІРѕРµ', price: 890, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'РЎР°Р»С„РµС‚РєРё Р»СЊРЅСЏРЅС‹Рµ J-LINE РЅР°Р±РѕСЂ 4 С€С‚. РЅР°С‚СѓСЂР°Р»СЊРЅС‹Рµ', price: 650, img: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80' },
-      { name: 'РџР»РµРґ AMADEUS С€РµСЂСЃС‚СЏРЅРѕР№ РєСЂСѓРїРЅР°СЏ РІСЏР·РєР° 130Г—160 СЃРј СЃРµСЂС‹Р№', price: 4560, img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80' },
-      { name: 'РљРѕРІСЂРёРє РїСЂРёРєСЂРѕРІР°С‚РЅС‹Р№ J-LINE РґР¶СѓС‚ РЅР°С‚СѓСЂР°Р»СЊРЅС‹Р№ 60Г—90 СЃРј', price: 2340, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'РџРѕСЃС‚РµР»СЊРЅРѕРµ Р±РµР»СЊС‘ AMADEUS СЃР°С‚РёРЅ 200Г—220 СЃРј Р±РµР»РѕРµ', price: 5800, img: 'https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=400&q=80' },
-      { name: 'РЎРєР°С‚РµСЂС‚СЊ Р»СЊРЅСЏРЅР°СЏ J-LINE 140Г—200 СЃРј РЅР°С‚СѓСЂР°Р»СЊРЅР°СЏ', price: 1980, img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80' },
-    ]
-  },
-  furniture: {
-    name: 'РњРµР±РµР»СЊ',
-    desc: 'РЎС‚РёР»СЊРЅР°СЏ РјРµР±РµР»СЊ РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё вЂ” СЃС‚СѓР»СЊСЏ, СЃС‚РѕР»С‹, С‚СѓРјР±С‹ Рё СЃС‚РµР»Р»Р°Р¶Рё.',
-    products: [
-      { name: 'РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE РїР»РµС‚С‘РЅС‹Р№ РІ СЃС‚РёР»Рµ Р±РёСЃС‚СЂРѕ Р¶С‘Р»С‚С‹Р№', price: 14960, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE РїР»РµС‚С‘РЅС‹Р№ РІ СЃС‚РёР»Рµ Р±РёСЃС‚СЂРѕ СЂРѕР·РѕРІС‹Р№', price: 14960, img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80' },
-      { name: 'РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE РїР»РµС‚С‘РЅС‹Р№ РІ СЃС‚РёР»Рµ Р±РёСЃС‚СЂРѕ СЃРёРЅРёР№', price: 14960, img: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80' },
-      { name: 'Р–СѓСЂРЅР°Р»СЊРЅС‹Р№ СЃС‚РѕР»РёРє AMADEUS РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р·РѕР»РѕС‚РёСЃС‚С‹Р№ 60Г—40 СЃРј', price: 9800, img: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80' },
-      { name: 'РЎС‚РµР»Р»Р°Р¶ J-LINE РјРµС‚Р°Р»Р»Рѕ-РґРµСЂРµРІСЏРЅРЅС‹Р№ 5 РїРѕР»РѕРє С‡С‘СЂРЅС‹Р№', price: 18400, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'РџРѕРґСЃС‚Р°РІРєР° РґР»СЏ С†РІРµС‚РѕРІ J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ 3 СѓСЂРѕРІРЅСЏ С‡С‘СЂРЅР°СЏ', price: 5600, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'РЎРєР°РјСЊСЏ AMADEUS РґРµСЂРµРІСЏРЅРЅР°СЏ СЃ РїРѕРґСѓС€РєРѕР№ 120 СЃРј РЅР°С‚СѓСЂР°Р»СЊРЅР°СЏ', price: 11200, img: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80' },
-      { name: 'РљРѕРЅСЃРѕР»СЊРЅС‹Р№ СЃС‚РѕР» J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєРёР№ Р·РѕР»РѕС‚РёСЃС‚С‹Р№ 100Г—35 СЃРј', price: 13500, img: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80' },
-    ]
-  },
-  mirrors: {
-    name: 'Р—РµСЂРєР°Р»Р°',
-    desc: 'РќР°СЃС‚РµРЅРЅС‹Рµ Рё РЅР°РїРѕР»СЊРЅС‹Рµ Р·РµСЂРєР°Р»Р° РІ СЂР°Р·Р»РёС‡РЅС‹С… СЃС‚РёР»СЏС… РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё Рё Р¤СЂР°РЅС†РёРё.',
-    products: [
-      { name: 'Р—РµСЂРєР°Р»Рѕ РЅР°СЃС‚РµРЅРЅРѕРµ J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЂР°РјР° Р·РѕР»РѕС‚Р°СЏ 60Г—80 СЃРј', price: 8700, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ РЅР°РїРѕР»СЊРЅРѕРµ AMADEUS РґРµСЂРµРІСЏРЅРЅР°СЏ СЂР°РјР° 50Г—150 СЃРј', price: 14200, img: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ РєСЂСѓРіР»РѕРµ J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЂР°РјР° С‡С‘СЂРЅР°СЏ РґРёР°РјРµС‚СЂ 60 СЃРј', price: 6400, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ РЅР°СЃС‚РµРЅРЅРѕРµ С‚СЂРµСѓРіРѕР»СЊРЅРѕРµ J-LINE РЅР°Р±РѕСЂ 3 С€С‚.', price: 5100, img: 'https://images.unsplash.com/photo-1565814636199-ae8133055c1c?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ СЃ РїРѕР»РєРѕР№ AMADEUS РґРµСЂРµРІРѕ 40Г—60 СЃРј Р±РµР»РѕРµ', price: 4380, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ РґРµРєРѕСЂР°С‚РёРІРЅРѕРµ J-LINE Р°РЅС‚РёРєРІР°СЂРЅС‹Р№ СЌС„С„РµРєС‚ 70Г—90 СЃРј', price: 11600, img: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ СЃ РїРѕРґСЃРІРµС‚РєРѕР№ AMADEUS LED 50Г—70 СЃРј', price: 9800, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-    ]
-  },
-  vases: {
-    name: 'Р¦РІРµС‚РѕС‡РЅС‹Рµ РІР°Р·РѕРЅС‹',
-    desc: 'Р’Р°Р·С‹ Рё РєР°С€РїРѕ РґР»СЏ С†РІРµС‚РѕРІ Рё СЂР°СЃС‚РµРЅРёР№ РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё Рё Р¤СЂР°РЅС†РёРё.',
-    products: [
-      { name: 'Р’Р°Р·Р° СЃ СЂСѓС‡РєРѕР№ AMADEUS СЃ РїРѕС‚С‘РєР°РјРё РєСЂР°СЃРєРё РІС‹СЃРѕС‚Р° 19 СЃРј', price: 1870, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80' },
-      { name: 'РљР°С€РїРѕ J-LINE С‚РµСЂСЂР°РєРѕС‚Р° СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° РІС‹СЃРѕС‚Р° 25 СЃРј', price: 1640, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'Р’Р°Р·Р° СЃС‚РµРєР»СЏРЅРЅР°СЏ J-LINE РїСЂРѕР·СЂР°С‡РЅР°СЏ СЂРёС„Р»С‘РЅР°СЏ РІС‹СЃРѕС‚Р° 35 СЃРј', price: 2100, img: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80' },
-      { name: 'РљР°С€РїРѕ РїРѕРґРІРµСЃРЅРѕРµ AMADEUS РјР°РєСЂР°РјРµ СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р°', price: 1380, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'Р’Р°Р·Р° РєРµСЂР°РјРёС‡РµСЃРєР°СЏ J-LINE РјР°С‚РѕРІР°СЏ Р±РµР¶РµРІР°СЏ РІС‹СЃРѕС‚Р° 40 СЃРј', price: 3240, img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80' },
-      { name: 'Р’Р°Р·РѕРЅ РґР»СЏ С†РІРµС‚РѕРІ J-LINE Р±Р°РјР±СѓРєРѕРІС‹Р№ РїР»РµС‚С‘РЅС‹Р№ РІС‹СЃРѕС‚Р° 45 СЃРј', price: 2860, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'Р“РѕСЂС€РѕРє РєРµСЂР°РјРёС‡РµСЃРєРёР№ AMADEUS Р±РµР»С‹Р№ РјР°С‚РѕРІС‹Р№ 18 СЃРј', price: 980, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80' },
-    ]
-  },
-  figurines: {
-    name: 'РЎС‚Р°С‚СѓСЌС‚РєРё',
-    desc: 'Р”РµРєРѕСЂР°С‚РёРІРЅС‹Рµ СЃС‚Р°С‚СѓСЌС‚РєРё Рё СЃРєСѓР»СЊРїС‚СѓСЂС‹ РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё Рё РќРёРґРµСЂР»Р°РЅРґРѕРІ.',
-    products: [
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE Р±Р°СЃРєРµС‚Р±РѕР»РёСЃС‚ Р±РµР»Р°СЏ СЃ РјСЏС‡РѕРј 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE СЃ РіР°РЅС‚РµР»СЊСЋ Р±РµР»Р°СЏ 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Light&Living СЃРёР»СѓСЌС‚ РґРµРІСѓС€РєРё С‡С‘СЂРЅРѕРіРѕ С†РІРµС‚Р°', price: 6130, img: 'https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80' },
-      { name: 'Р”РµСЂР¶Р°С‚РµР»Рё РґР»СЏ РєРЅРёРі J-LINE Р·РµР»С‘РЅС‹Рµ РІ С„РѕСЂРјРµ РєСЂРѕРєРѕРґРёР»Р°', price: 3630, img: 'https://images.unsplash.com/photo-1589203832539-8014afcc5eba?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° J-LINE "Р”РµСЂРµРІРѕ" РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ РјРµРґРЅР°СЏ 40 СЃРј', price: 4200, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° AMADEUS РєСЂРѕР»РёРє РєРµСЂР°РјРёРєР° СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° 18 СЃРј', price: 1840, img: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° J-LINE С„Р»Р°РјРёРЅРіРѕ СЂРѕР·РѕРІРѕРµ РјРµС‚Р°Р»Р» 55 СЃРј', price: 5200, img: 'https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80' },
-    ]
-  },
-  frames: {
-    name: 'Р¤РѕС‚РѕСЂР°РјРєРё',
-    desc: 'РњРµС‚Р°Р»Р»РёС‡РµСЃРєРёРµ Рё РґРµСЂРµРІСЏРЅРЅС‹Рµ С„РѕС‚РѕСЂР°РјРєРё РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё РґР»СЏ РІР°С€РёС… РІРѕСЃРїРѕРјРёРЅР°РЅРёР№.',
-    products: [
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЃРµСЂРµР±СЂСЏРЅР°СЏ СЃ РїРѕР»РѕСЃРєР°РјРё 13x18 СЃРј', price: 680, img: 'https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ Р·РѕР»РѕС‚Р°СЏ 10x15 СЃРј', price: 520, img: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° J-LINE С‡С‘СЂРЅР°СЏ РјР°С‚РѕРІР°СЏ 20x25 СЃРј', price: 740, img: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° AMADEUS РґРµСЂРµРІСЏРЅРЅР°СЏ РЅР°Р±РѕСЂ РёР· 3 С€С‚. СЂР°Р·РЅС‹С… СЂР°Р·РјРµСЂРѕРІ', price: 1840, img: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400&q=80' },
-      { name: 'РљРѕР»Р»Р°Р¶ С„РѕС‚РѕСЂР°РјРєР° J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ 9 СЏС‡РµРµРє 60x40 СЃРј', price: 2340, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° СЃ РІРµСЂС‘РІРєРѕР№ Рё РїСЂРёС‰РµРїРєР°РјРё J-LINE 40x60 СЃРј', price: 960, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° J-LINE СЃРµСЂРµР±СЂСЏРЅР°СЏ Р°РЅС‚РёРєРІР°СЂРЅС‹Р№ СЌС„С„РµРєС‚ 15x20 СЃРј', price: 890, img: 'https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80' },
-    ]
-  },
-  jewelry: {
-    name: 'РҐСЂР°РЅРµРЅРёРµ СѓРєСЂР°С€РµРЅРёР№',
-    desc: 'РЎС‚РёР»СЊРЅС‹Рµ РїРѕРґСЃС‚Р°РІРєРё, С€РєР°С‚СѓР»РєРё Рё РґРµСЂР¶Р°С‚РµР»Рё РґР»СЏ СѓРєСЂР°С€РµРЅРёР№ РѕС‚ РІРµРґСѓС‰РёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№ Р‘РµР»СЊРіРёРё.',
-    products: [
-      { name: 'РџРѕРґСЃС‚Р°РІРєР° РґР»СЏ СѓРєСЂР°С€РµРЅРёР№ J-LINE РјРµС‚Р°Р»Р» РґРµСЂРµРІРѕ 3 СѓСЂРѕРІРЅСЏ', price: 2800, img: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=80' },
-      { name: 'РЁРєР°С‚СѓР»РєР° AMADEUS Р±Р°СЂС…Р°С‚ С‡С‘СЂРЅР°СЏ СЃ Р·РµСЂРєР°Р»РѕРј 22x15 СЃРј', price: 3400, img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&q=80' },
-      { name: 'Р”РµСЂР¶Р°С‚РµР»СЊ РґР»СЏ РєРѕР»РµС† J-LINE РєРµСЂР°РјРёРєР° СЂСѓС‡РєР°-РґРµСЂРµРІРѕ', price: 980, img: 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&q=80' },
-      { name: 'РџРѕРґСЃС‚Р°РІРєР° РґР»СЏ РєРѕР»РµС† J-LINE СЃРµСЂР°СЏ Р±Р°СЂС…Р°С‚ 20 СЃР»РѕС‚РѕРІ', price: 1200, img: 'https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=400&q=80' },
-      { name: 'Р”РµСЂР¶Р°С‚РµР»СЊ РґР»СЏ СЃРµСЂС‘Рі J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЃРµС‚РєР° Р·РѕР»РѕС‚Р°СЏ 25x35 СЃРј', price: 1650, img: 'https://images.unsplash.com/photo-1583292659-5a13ff18f60f?w=400&q=80' },
-      { name: 'РЁРєР°С‚СѓР»РєР° AMADEUS РєРѕРјРѕРґ РґРµСЂРµРІРѕ 4 СЃРµРєС†РёРё Natural', price: 4200, img: 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=400&q=80' },
-      { name: 'РўСЂСЋРјРѕ J-LINE СЃ Р·РµСЂРєР°Р»РѕРј Рё СЏС‰РёРєРѕРј Р±РµР»РѕРµ РґРµСЂРµРІРѕ', price: 7800, img: 'https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=400&q=80' },
-    ]
-  },
-  new: {
-    name: 'РќРѕРІС‹Рµ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ',
-    desc: 'РќРѕРІРµР№С€РёРµ С‚РѕРІР°СЂС‹ РІ РЅР°С€РµРј РјР°РіР°Р·РёРЅРµ вЂ” С‚РѕР»СЊРєРѕ С‡С‚Рѕ РґРѕСЃС‚Р°РІР»РµРЅРЅС‹Рµ РёР· Р•РІСЂРѕРїС‹.',
-    products: [
-      { name: 'РљСѓРІС€РёРЅ СЃС‚РµРєР»СЏРЅРЅС‹Р№ РїСЂРѕР·СЂР°С‡РЅС‹Р№ РёР· Р±РѕСЂРѕСЃРёР»РёРєР°С‚Р° РЅРµР±СЊСЋС‰РёР№СЃСЏ', price: 2100, img: 'https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80' },
-      { name: 'РўРѕСЂС€РµСЂ J-LINE РїР»РµС‚С‘РЅС‹Р№ РёР· СЂРѕС‚Р°РЅРіР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹Р№ 133 СЃРј', price: 13530, img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80' },
-      { name: 'РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE Р±РёСЃС‚СЂРѕ СЃ РѕС‚РєСЂС‹С‚РѕР№ СЃРїРёРЅРєРѕР№ Р¶С‘Р»С‚С‹Р№', price: 14960, img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80' },
-      { name: 'РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE Р±РёСЃС‚СЂРѕ СЂРѕР·РѕРІС‹Р№', price: 14960, img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE Р±Р°СЃРєРµС‚Р±РѕР»РёСЃС‚ Р±РµР»Р°СЏ СЃ РјСЏС‡РѕРј 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80' },
-      { name: 'РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE СЃ РіР°РЅС‚РµР»СЊСЋ Р±РµР»Р°СЏ 25 СЃРј', price: 2920, img: 'https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80' },
-      { name: 'Р’Р°Р·Р° СЃ СЂСѓС‡РєРѕР№ AMADEUS СЃ РїРѕС‚С‘РєР°РјРё РєСЂР°СЃРєРё 19 СЃРј Р¤СЂР°РЅС†РёСЏ', price: 1870, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80' },
-      { name: 'Р¤РѕС‚РѕСЂР°РјРєР° J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЃРµСЂРµР±СЂСЏРЅР°СЏ 13x18 СЃРј Р‘РµР»СЊРіРёСЏ', price: 680, img: 'https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80' },
-      { name: 'Р—РµСЂРєР°Р»Рѕ РЅР°СЃС‚РµРЅРЅРѕРµ J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЂР°РјР° Р·РѕР»РѕС‚Р°СЏ 60Г—80 СЃРј', price: 8700, img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80' },
-      { name: 'РЁРєР°С‚СѓР»РєР° AMADEUS Р±Р°СЂС…Р°С‚ С‡С‘СЂРЅР°СЏ СЃ Р·РµСЂРєР°Р»РѕРј 22x15 СЃРј', price: 3400, img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&q=80' },
-      { name: 'Р”РµРєРѕСЂР°С‚РёРІРЅР°СЏ РІР°Р·Р° РєРµСЂР°РјРёС‡РµСЃРєР°СЏ СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° РІС‹СЃРѕС‚Р° 30 СЃРј', price: 3240, img: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80' },
-      { name: 'Р‘СЂР° РЅР°СЃС‚РµРЅРЅРѕРµ Light&Living С‡С‘СЂРЅРѕРµ РјРµС‚Р°Р»Р» E27', price: 3750, img: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&q=80' },
-    ]
-  }
+// Logic specific to category page
+const CAT_NAMES = {
+  'gifts':'Подарки','candles':'Свечи','lighting':'Освещение','furniture':'Мебель',
+  'mirrors':'Зеркала','vases':'Вазоны','dishes':'Посуда','decor':'Декор',
+  'textile':'Текстиль','figurines':'Статуэтки','frames':'Фоторамки','jewelry':'Украшения'
 };
 
-// ---- PAGINATION ----
-const ITEMS_PER_PAGE = 6;
-let currentPage = 1;
-let currentProducts = [];
+document.addEventListener('DOMContentLoaded', () => {
+  initCommonComponents('category');
+  const params = new URLSearchParams(location.search);
+  const cat = params.get('cat') || 'decor';
+  
+  if (CAT_NAMES[cat]) {
+    document.title = CAT_NAMES[cat] + ' — Home RU';
+    document.getElementById('page-title').textContent = CAT_NAMES[cat] + ' — Home RU';
+    document.getElementById('cat-title').textContent = CAT_NAMES[cat].toUpperCase();
+    document.getElementById('breadcrumb-cat').textContent = CAT_NAMES[cat];
+  }
+  
+  renderCategoryProducts(cat);
+});
 
-function renderProducts(products) {
-  if (!products.length) return '<p style="padding:40px 0;color:#888;">РўРѕРІР°СЂС‹ РЅРµ РЅР°Р№РґРµРЅС‹</p>';
-  return products.map(p => `
-    <div class="product-card">
-      <div class="product-img-wrap">
-        <img src="${p.img}" alt="${p.name}" loading="lazy"/>
-      </div>
-      <div class="product-info">
-        <div class="product-name">${p.name}</div>
-        <div class="product-footer">
-          <span class="product-price">${p.price.toLocaleString('ru-RU')} в‚ґ</span>
-          <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
+function renderCategoryProducts(cat) {
+  const container = document.getElementById('category-products');
+  // We use PRODUCTS_DB from product.js
+  const allProducts = Object.values(PRODUCTS_DB);
+  let filtered = allProducts.filter(p => p.category === cat);
+  
+  // Apply visual sorting
+  const sort = document.getElementById('sort-select').value;
+  if(sort === 'price-asc') filtered.sort((a,b) => a.price - b.price);
+  if(sort === 'price-desc') filtered.sort((a,b) => b.price - a.price);
+  if(sort === 'name-asc') filtered.sort((a,b) => a.name.localeCompare(b.name, 'ru'));
 
-function renderPagination(total, perPage, current) {
-  const totalPages = Math.ceil(total / perPage);
-  if (totalPages <= 1) {
-    document.getElementById('pagination').innerHTML = '';
+  container.innerHTML = '';
+  if (filtered.length === 0) {
+    container.innerHTML = '<p class="no-products">В данной категории товаров пока нет.</p>';
+    document.getElementById('pagination-info').textContent = 'Товары не найдены';
     return;
   }
 
-  let html = '';
-
-  // Prev button
-  if (current > 1) {
-    html += `<button class="page-btn" onclick="goToPage(${current - 1})">вЂ№</button>`;
-  }
-
-  // Page numbers
-  for (let i = 1; i <= totalPages; i++) {
-    if (
-      i === 1 ||
-      i === totalPages ||
-      (i >= current - 1 && i <= current + 1)
-    ) {
-      html += `<button class="page-btn ${i === current ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
-    } else if (i === current - 2 || i === current + 2) {
-      html += `<span class="page-dots">...</span>`;
-    }
-  }
-
-  // Next button
-  if (current < totalPages) {
-    html += `<button class="page-btn" onclick="goToPage(${current + 1})">вЂє</button>`;
-  }
-
-  document.getElementById('pagination').innerHTML = html;
+  filtered.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <div class="product-img-wrap">
+        <a href="product.html?id=${p.id}"><img src="${p.images[0]}" alt="${p.name}" loading="lazy"/></a>
+      </div>
+      <div class="product-info">
+        <a href="product.html?id=${p.id}" class="product-name">${p.name}</a>
+        <div class="product-footer">
+          <span class="product-price">${p.price.toLocaleString('ru-RU')} ₽</span>
+          <button class="add-to-cart-btn" onclick="addToCartFromCat('${p.id}')">В корзину</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+  
+  document.getElementById('pagination-info').textContent = `Показано 1 из 1 страниц (всего ${filtered.length} товаров)`;
 }
 
-function goToPage(page) {
-  currentPage = page;
-  const start = (page - 1) * ITEMS_PER_PAGE;
-  const slice = currentProducts.slice(start, start + ITEMS_PER_PAGE);
-  document.getElementById('category-products').innerHTML = renderProducts(slice);
-  renderPagination(currentProducts.length, ITEMS_PER_PAGE, currentPage);
-  document.getElementById('cat-count').textContent = `РќР°Р№РґРµРЅРѕ: ${currentProducts.length} С‚РѕРІР°СЂРѕРІ`;
-  initCommonComponents(new URLSearchParams(location.search).get('cat') || 'new');
-  // Scroll to top of products
-  document.getElementById('category-products').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function applyPriceFilter() {
-  const from = parseInt(document.getElementById('price-from').value) || 0;
-  const to = parseInt(document.getElementById('price-to').value) || Infinity;
-  const cat = new URLSearchParams(location.search).get('cat') || 'new';
-  currentProducts = (CATEGORIES[cat]?.products || []).filter(p => p.price >= from && p.price <= to);
-  currentPage = 1;
-  goToPage(1);
-}
-
-function sortCatProducts(val) {
-  const cat = new URLSearchParams(location.search).get('cat') || 'new';
-  let products = [...(CATEGORIES[cat]?.products || [])];
-  if (val === 'price-asc') products.sort((a, b) => a.price - b.price);
-  else if (val === 'price-desc') products.sort((a, b) => b.price - a.price);
-  else if (val === 'name-asc') products.sort((a, b) => a.name.localeCompare(b.name));
-  currentProducts = products;
-  currentPage = 1;
-  goToPage(1);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
+function applyCatFilters() {
   const params = new URLSearchParams(location.search);
-  const cat = params.get('cat') || 'new';
-  const catData = CATEGORIES[cat] || CATEGORIES['new'];
+  const cat = params.get('cat') || 'decor';
+  renderCategoryProducts(cat);
+}
 
-  document.title = catData.name + ' вЂ” Home UA';
-  document.getElementById('page-title').textContent = catData.name + ' вЂ” Home UA';
-  document.getElementById('category-title').textContent = catData.name.toUpperCase();
-  document.getElementById('category-desc').textContent = catData.desc;
-  document.getElementById('breadcrumb-cat').textContent = catData.name;
-
-  currentProducts = [...catData.products];
-  goToPage(1);
-
-  // Highlight active category in sidebar
-  document.querySelectorAll('#cat-filter-list a').forEach(a => {
-    if (a.href.includes('cat=' + cat)) a.classList.add('active');
-  });
-
-  document.getElementById('price-slider').addEventListener('input', function() {
-    document.getElementById('price-to').value = this.value;
-  });
-});
+function addToCartFromCat(id) {
+  const p = PRODUCTS_DB[id];
+  if(!p) return;
+  let cart = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  const exist = cart.find(i => i.id === id);
+  if(exist) exist.qty++;
+  else cart.push({ id: p.id, name: p.name, price: p.price, img: p.images[0], qty: 1 });
+  localStorage.setItem('cartItems', JSON.stringify(cart));
+  const total = cart.reduce((s,i) => s + i.qty, 0);
+  localStorage.setItem('cartCount', total);
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
+}
 </script>
 </body>
 </html>
-
-

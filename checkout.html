@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р° вЂ” Home UA</title>
+  <title>Оформление заказа — Home RU</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -16,161 +16,128 @@
 <main class="page-main">
   <div class="container">
     <nav class="breadcrumb">
-      <a href="index.html">Р“Р»Р°РІРЅР°СЏ</a>
-      <span>вЂє</span>
-      <a href="cart.html">РљРѕСЂР·РёРЅР°</a>
-      <span>вЂє</span>
-      <span>РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р°</span>
+      <a href="index.html">Главная</a>
+      <span>›</span>
+      <a href="cart.html">Корзина</a>
+      <span>›</span>
+      <span>Оформление заказа</span>
     </nav>
 
-    <h1 class="checkout-main-title">РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РєР°Р·Р°</h1>
+    <h1 class="checkout-main-title">Оформление заказа</h1>
 
     <div class="checkout-layout">
-      <!-- Left: form -->
+      <!-- Форма заказа -->
       <div class="checkout-form-col">
 
-        <!-- Buyer details -->
         <div class="checkout-block" id="order-success" style="display:none">
           <div class="success-box">
-            <div class="success-icon">вњ“</div>
-            <h2>Р—Р°РєР°Р· РѕС„РѕСЂРјР»РµРЅ!</h2>
-            <p>РЎРїР°СЃРёР±Рѕ Р·Р° РїРѕРєСѓРїРєСѓ! РќР°С€ РјРµРЅРµРґР¶РµСЂ СЃРІСЏР¶РµС‚СЃСЏ СЃ РІР°РјРё РІ Р±Р»РёР¶Р°Р№С€РµРµ РІСЂРµРјСЏ.</p>
-            <p>РќРѕРјРµСЂ Р·Р°РєР°Р·Р°: <strong id="order-number">#1001</strong></p>
-            <a href="index.html" class="btn-continue-shopping" style="margin-top:16px;display:inline-block">РќР° РіР»Р°РІРЅСѓСЋ</a>
+            <div class="success-icon">✓</div>
+            <h2>Заказ оформлен!</h2>
+            <p>Спасибо за покупку! Наш менеджер свяжется с вами в ближайшее время для подтверждения заказа и передачи реквизитов для оплаты.</p>
+            <p>Номер заказа: <strong id="order-number">#1001</strong></p>
+            <a href="index.html" class="btn-continue-shopping" style="margin-top:16px;display:inline-block">На главную</a>
           </div>
         </div>
 
         <div id="checkout-form-wrap">
           <div class="checkout-block">
             <div class="checkout-block-header">
-              <h2>РџРѕРєСѓРїР°С‚РµР»СЊ</h2>
-              <a href="login.html" class="already-registered">РЇ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅ</a>
+              <h2>Покупатель</h2>
+              <a href="login.html" class="already-registered">Я зарегистрирован</a>
             </div>
 
             <form id="checkout-form" onsubmit="submitOrder(event)">
               <div class="form-row-2">
                 <div class="form-group">
-                  <label>* РРјСЏ</label>
-                  <input type="text" id="co-firstname" placeholder="РРјСЏ" required/>
+                  <label>* Имя</label>
+                  <input type="text" id="co-firstname" placeholder="Имя" required/>
                 </div>
                 <div class="form-group">
-                  <label>* Р¤Р°РјРёР»РёСЏ</label>
-                  <input type="text" id="co-lastname" placeholder="Р¤Р°РјРёР»РёСЏ" required/>
+                  <label>* Фамилия</label>
+                  <input type="text" id="co-lastname" placeholder="Фамилия" required/>
                 </div>
               </div>
               <div class="form-row-2">
                 <div class="form-group">
-                  <label>* РўРµР»РµС„РѕРЅ</label>
-                  <input type="tel" id="co-phone" placeholder="+38 (___) ___-__-__" required/>
+                  <label>* Телефон</label>
+                  <input type="tel" id="co-phone" placeholder="+7 (___) ___-__-__" required/>
                 </div>
                 <div class="form-group">
                   <label>* E-Mail</label>
                   <input type="email" id="co-email" placeholder="E-Mail" required/>
                 </div>
               </div>
-              <div class="form-group register-checkbox-wrap">
-                <label class="checkbox-label">
-                  <input type="checkbox" id="co-register"/>
-                  <span>Р РµРіРёСЃС‚СЂР°С†РёСЏ</span>
-                  <span class="checkbox-hint">(СЃРѕР·РґР°С‚СЊ Р°РєРєР°СѓРЅС‚ РґР»СЏ РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ Р·Р°РєР°Р·РѕРІ)</span>
-                </label>
-              </div>
-              <div id="register-fields" style="display:none">
-                <div class="form-group">
-                  <label>* РџР°СЂРѕР»СЊ</label>
-                  <input type="password" id="co-password" placeholder="РџСЂРёРґСѓРјР°Р№С‚Рµ РїР°СЂРѕР»СЊ (РјРёРЅ. 6 СЃРёРјРІРѕР»РѕРІ)"/>
-                </div>
-                <div class="form-group">
-                  <label>* РџРѕРґС‚РІРµСЂРґРёС‚Рµ РїР°СЂРѕР»СЊ</label>
-                  <input type="password" id="co-password2" placeholder="РџРѕРІС‚РѕСЂРёС‚Рµ РїР°СЂРѕР»СЊ"/>
-                </div>
-              </div>
 
-              <!-- Delivery -->
+              <!-- Доставка -->
               <div class="checkout-block-inner">
-                <h2>РЎРїРѕСЃРѕР± Р”РѕСЃС‚Р°РІРєРё</h2>
+                <h2>Способ Доставки</h2>
                 <div class="radio-list">
                   <label class="radio-item">
-                    <input type="radio" name="delivery" value="branch" checked/>
-                    <span>Р”РѕСЃС‚Р°РІРєР° РІ РѕС‚РґРµР»РµРЅРёРµ РќРѕРІРѕР№ РїРѕС‡С‚С‹</span>
+                    <input type="radio" name="delivery" value="cdek" checked/>
+                    <span>СДЭК (до пункта выдачи)</span>
                   </label>
-                  <label class="radio-item" id="branch-row">
-                    <span class="radio-sub-label">РќРѕРјРµСЂ РѕС‚РґРµР»РµРЅРёСЏ:</span>
-                    <input type="text" id="co-branch" placeholder="Р’РІРµРґРёС‚Рµ РіРѕСЂРѕРґ Рё в„– РѕС‚РґРµР»РµРЅРёСЏ"/>
+                  <label class="radio-item">
+                    <input type="radio" name="delivery" value="boxberry"/>
+                    <span>Boxberry (до пункта выдачи)</span>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="delivery" value="post"/>
+                    <span>Почта России</span>
                   </label>
                   <label class="radio-item">
                     <input type="radio" name="delivery" value="courier"/>
-                    <span>Р”РѕСЃС‚Р°РІРєР° РєСѓСЂСЊРµСЂРѕРј РќРѕРІРѕР№ РїРѕС‡С‚С‹ РЅР° Р°РґСЂРµСЃ</span>
+                    <span>Курьерская доставка по адресу</span>
                   </label>
-                  <label class="radio-item">
-                    <input type="radio" name="delivery" value="parcel"/>
-                    <span>Р”РѕСЃС‚Р°РІРєР° РІ РїРѕС‡С‚РѕРјР°С‚ РќРѕРІРѕР№ РїРѕС‡С‚С‹</span>
-                  </label>
+                  <div class="form-group" id="address-row" style="margin-top:10px">
+                    <label>Адрес / Пункт выдачи:</label>
+                    <input type="text" id="co-address" placeholder="Город, улица, дом, кв / Номер ПВЗ" required/>
+                  </div>
                 </div>
               </div>
 
-              <!-- Payment -->
+              <!-- Оплата -->
               <div class="checkout-block-inner">
-                <h2>РЎРїРѕСЃРѕР± РћРїР»Р°С‚С‹</h2>
+                <h2>Способ Оплаты</h2>
                 <div class="radio-list">
                   <label class="radio-item">
-                    <input type="radio" name="payment" value="cash" checked/>
-                    <span>РћРїР»Р°С‚Р° РЅР°Р»РёС‡РЅС‹РјРё РїСЂРё РїРѕР»СѓС‡РµРЅРёРё</span>
+                    <input type="radio" name="payment" value="transfer" checked/>
+                    <span>Перевод по реквизитам (на карту или расчетный счет ИП)</span>
                   </label>
-                  <label class="radio-item">
-                    <input type="radio" name="payment" value="online"/>
-                    <span>РћРїР»Р°С‚Р° РєР°СЂС‚РѕР№ РѕРЅР»Р°Р№РЅ (LiqPay)</span>
-                  </label>
-                  <label class="radio-item">
-                    <input type="radio" name="payment" value="transfer"/>
-                    <span>Р‘Р°РЅРєРѕРІСЃРєРёР№ РїРµСЂРµРІРѕРґ РЅР° СЂРµРєРІРёР·РёС‚С‹</span>
-                  </label>
+                  <p class="payment-hint" style="font-size:12px;color:#666;margin-top:5px;padding-left:24px;">
+                    После оформления заказа менеджер отправит вам реквизиты для оплаты.
+                  </p>
                 </div>
               </div>
 
-              <!-- Comment -->
+              <!-- Комментарий -->
               <div class="form-group">
-                <label>РљРѕРјРјРµРЅС‚Р°СЂРёР№ Рє Р·Р°РєР°Р·Сѓ</label>
-                <textarea id="co-comment" rows="3" placeholder="Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїРѕР¶РµР»Р°РЅРёСЏ..."></textarea>
+                <label>Комментарий к заказу</label>
+                <textarea id="co-comment" rows="3" placeholder="Дополнительные пожелания..."></textarea>
               </div>
 
-              <button type="submit" class="btn-place-order">РћР¤РћР РњРРўР¬ Р—РђРљРђР—</button>
+              <button type="submit" class="btn-place-order">ОФОРМИТЬ ЗАКАЗ</button>
             </form>
           </div>
         </div>
       </div>
 
-      <!-- Right: order summary -->
+      <!-- Итоги заказа -->
       <div class="checkout-summary-col">
         <div class="checkout-block summary-block">
-          <h2>Р’Р°С€ Р·Р°РєР°Р·</h2>
-
-          <div class="summary-coupon">
-            <button class="coupon-toggle-small" onclick="toggleSumCoupon()">РЈ РІР°СЃ РµСЃС‚СЊ РєСѓРїРѕРЅ? РСЃРїРѕР»СЊР·СѓР№С‚Рµ РµРіРѕ! в–ѕ</button>
-            <div id="sum-coupon-form" style="display:none" class="coupon-row">
-              <input type="text" id="sum-coupon-input" placeholder="РљРѕРґ РєСѓРїРѕРЅР°..." class="coupon-input"/>
-              <button class="coupon-btn" onclick="applySumCoupon()">OK</button>
-            </div>
-            <div class="coupon-progress" id="free-delivery-bar">
-              <p class="free-del-hint">Р”Рѕ Р±РµСЃРїР»Р°С‚РЅРѕР№ РґРѕСЃС‚Р°РІРєРё РµС‰С‘: <strong id="free-del-amount">вЂ“</strong></p>
-              <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
-            </div>
-          </div>
-
+          <h2>Ваш заказ</h2>
           <div class="summary-items" id="summary-items"></div>
-
           <div class="summary-totals">
             <div class="totals-row">
-              <span>РџРѕРґС‹С‚РѕРі:</span>
-              <span id="sum-subtotal">0 в‚ґ</span>
+              <span>Подытог:</span>
+              <span id="sum-subtotal">0 ₽</span>
             </div>
             <div class="totals-row" id="sum-discount-row" style="display:none">
-              <span>РЎРєРёРґРєР°:</span>
-              <span id="sum-discount" style="color:#c0392b">0 в‚ґ</span>
+              <span>Скидка:</span>
+              <span id="sum-discount" style="color:#c0392b">0 ₽</span>
             </div>
             <div class="totals-row totals-total">
-              <span>РС‚РѕРіРѕ:</span>
-              <span id="sum-total">0 в‚ґ</span>
+              <span>Итого:</span>
+              <span id="sum-total">0 ₽</span>
             </div>
           </div>
         </div>
@@ -182,24 +149,9 @@
 <div id="site-footer-placeholder"></div>
 <script src="components.js"></script>
 <script>
-const FREE_DELIVERY_THRESHOLD = 5000;
-
 document.addEventListener('DOMContentLoaded', () => {
   initCommonComponents('checkout');
   renderSummary();
-
-  // Register toggle
-  document.getElementById('co-register').addEventListener('change', function() {
-    document.getElementById('register-fields').style.display = this.checked ? 'block' : 'none';
-  });
-
-  // Delivery type toggle
-  document.querySelectorAll('input[name="delivery"]').forEach(r => {
-    r.addEventListener('change', () => {
-      document.getElementById('branch-row').style.display =
-        r.value === 'branch' && r.checked ? 'flex' : 'none';
-    });
-  });
 });
 
 function renderSummary() {
@@ -216,92 +168,40 @@ function renderSummary() {
       <img src="${item.img}" alt="${item.name}"/>
       <div class="summary-item-info">
         <span class="summary-item-name">${item.name}</span>
-        <span class="summary-item-qty">РљРѕРґ: ${item.id}</span>
-        <span class="summary-item-label" style="background:#e53935;color:white;font-size:11px;padding:2px 6px;display:inline-block;margin-top:2px">РџСЂРµРґР·Р°РєР°Р·</span>
+        <span class="summary-item-qty">Кол-во: ${item.qty} шт.</span>
       </div>
       <div class="summary-item-price">
-        <span>Р·Р° 1 С€С‚. ${item.price.toLocaleString('ru-RU')} в‚ґ</span>
-        <strong>Р’СЃРµРіРѕ ${line.toLocaleString('ru-RU')} в‚ґ</strong>
-        <div class="summary-qty-row">
-          <button onclick="changeSummaryQty('${item.id}',-1)" class="cart-qty-btn">в€’</button>
-          <span>${item.qty}</span>
-          <button onclick="changeSummaryQty('${item.id}',1)" class="cart-qty-btn">+</button>
-          <button onclick="removeSummaryItem('${item.id}')" class="cart-remove-btn" title="РЈРґР°Р»РёС‚СЊ">рџ—‘</button>
-        </div>
+        <strong>${line.toLocaleString('ru-RU')} ₽</strong>
       </div>`;
     summaryEl.appendChild(div);
   });
 
   const disc = parseFloat(localStorage.getItem('cartDiscount') || '0');
   const total = subtotal - disc;
-  document.getElementById('sum-subtotal').textContent = subtotal.toLocaleString('ru-RU') + ' в‚ґ';
-  document.getElementById('sum-total').textContent = total.toLocaleString('ru-RU') + ' в‚ґ';
+  document.getElementById('sum-subtotal').textContent = subtotal.toLocaleString('ru-RU') + ' ₽';
+  document.getElementById('sum-total').textContent = total.toLocaleString('ru-RU') + ' ₽';
   if (disc > 0) {
     document.getElementById('sum-discount-row').style.display = 'flex';
-    document.getElementById('sum-discount').textContent = '-' + disc.toLocaleString('ru-RU') + ' в‚ґ';
-  }
-
-  // Free delivery bar
-  const remaining = Math.max(0, FREE_DELIVERY_THRESHOLD - subtotal);
-  document.getElementById('free-del-amount').textContent = remaining > 0
-    ? remaining.toLocaleString('ru-RU') + ' в‚ґ'
-    : 'Р±РµСЃРїР»Р°С‚РЅРѕ вњ“';
-  const pct = Math.min(100, (subtotal / FREE_DELIVERY_THRESHOLD) * 100);
-  document.getElementById('progress-fill').style.width = pct + '%';
-}
-
-function changeSummaryQty(id, delta) {
-  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
-  const item = items.find(i => i.id === id);
-  if (item) item.qty = Math.max(1, item.qty + delta);
-  localStorage.setItem('cartItems', JSON.stringify(items));
-  const total = items.reduce((s, i) => s + i.qty, 0);
-  localStorage.setItem('cartCount', total);
-  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
-  renderSummary();
-}
-
-function removeSummaryItem(id) {
-  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
-  items = items.filter(i => i.id !== id);
-  localStorage.setItem('cartItems', JSON.stringify(items));
-  const total = items.reduce((s, i) => s + i.qty, 0);
-  localStorage.setItem('cartCount', total);
-  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
-  renderSummary();
-}
-
-function toggleSumCoupon() {
-  const f = document.getElementById('sum-coupon-form');
-  f.style.display = f.style.display === 'none' ? 'flex' : 'none';
-}
-
-function applySumCoupon() {
-  const code = document.getElementById('sum-coupon-input').value.trim().toUpperCase();
-  const COUPONS = { 'SALE10': 10, 'HOME15': 15 };
-  if (COUPONS[code]) {
-    let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
-    const sub = items.reduce((s, i) => s + i.price * i.qty, 0);
-    localStorage.setItem('cartDiscount', Math.round(sub * COUPONS[code] / 100));
-    renderSummary();
+    document.getElementById('sum-discount').textContent = '-' + disc.toLocaleString('ru-RU') + ' ₽';
   }
 }
 
 function submitOrder(e) {
   e.preventDefault();
   const items = JSON.parse(localStorage.getItem('cartItems') || '[]');
-  if (items.length === 0) { alert('РљРѕСЂР·РёРЅР° РїСѓСЃС‚Р°!'); return; }
-  // Clear cart
+  if (items.length === 0) { alert('Корзина пуста!'); return; }
+  
+  // Clean up
   localStorage.removeItem('cartItems');
   localStorage.setItem('cartCount', '0');
   localStorage.removeItem('cartDiscount');
   document.querySelectorAll('.cart-badge').forEach(b => b.textContent = '0');
+  
   // Show success
   document.getElementById('checkout-form-wrap').style.display = 'none';
   document.getElementById('order-success').style.display = 'block';
-  document.getElementById('order-number').textContent = '#' + (1000 + Math.floor(Math.random() * 9000));
+  document.getElementById('order-number').textContent = '#' + (10000 + Math.floor(Math.random() * 90000));
 }
 </script>
 </body>
 </html>
-

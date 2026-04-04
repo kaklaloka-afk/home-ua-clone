@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title id="product-page-title">РўРѕРІР°СЂ вЂ” Home UA</title>
+  <title id="product-page-title">Товар — Home RU</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -16,131 +16,122 @@
 <main class="page-main">
   <div class="container">
     <nav class="breadcrumb" id="product-breadcrumb">
-      <a href="index.html">Р“Р»Р°РІРЅР°СЏ</a>
-      <span>вЂє</span>
-      <a href="category.html" id="bc-category">РљР°С‚РµРіРѕСЂРёСЏ</a>
-      <span>вЂє</span>
-      <span id="bc-product">РўРѕРІР°СЂ</span>
+      <a href="index.html">Главная</a>
+      <span>›</span>
+      <a href="category.html" id="bc-category">Категория</a>
+      <span>›</span>
+      <span id="bc-product">Товар</span>
     </nav>
 
     <div class="product-detail-layout">
-      <!-- Left: Images -->
+      <!-- Изображения -->
       <div class="product-gallery">
         <div class="gallery-main">
-          <img id="main-product-img" src="" alt="РўРѕРІР°СЂ" loading="eager"/>
+          <img id="main-product-img" src="" alt="Товар" loading="eager"/>
         </div>
         <div class="gallery-thumbs" id="gallery-thumbs">
-          <!-- injected by JS -->
         </div>
       </div>
 
-      <!-- Right: Info -->
+      <!-- Информация -->
       <div class="product-info-panel">
-        <h1 class="product-detail-title" id="product-detail-name">Р—Р°РіСЂСѓР·РєР°...</h1>
+        <h1 class="product-detail-title" id="product-detail-name">Загрузка...</h1>
         <div class="product-meta-row">
-          <span class="product-model">РљРѕРґ: <span id="product-model-num">---</span></span>
-          <span class="product-status" id="product-availability">Р’ РЅР°Р»РёС‡РёРё</span>
+          <span class="product-model">Код: <span id="product-model-num">---</span></span>
+          <span class="product-status" id="product-availability">В наличии</span>
         </div>
-        <div class="product-detail-price" id="product-detail-price">0 в‚ґ</div>
+        <div class="product-detail-price" id="product-detail-price">0 ₽</div>
 
         <div class="product-actions">
           <div class="qty-row">
-            <label>РљРѕР»РёС‡РµСЃС‚РІРѕ:</label>
+            <label>Количество:</label>
             <div class="qty-control">
-              <button class="qty-btn" id="qty-minus">в€’</button>
+              <button class="qty-btn" id="qty-minus">−</button>
               <input type="number" id="qty-input" value="1" min="1" max="99"/>
               <button class="qty-btn" id="qty-plus">+</button>
             </div>
           </div>
           <button class="add-to-cart-main" id="add-to-cart-main">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-            Р”РћР‘РђР’РРўР¬ Р’ РљРћР Р—РРќРЈ
+            ДОБАВИТЬ В КОРЗИНУ
           </button>
-          <button class="wishlist-btn" id="wishlist-btn" title="Р’ РёР·Р±СЂР°РЅРЅРѕРµ">
+          <button class="wishlist-btn" id="wishlist-btn" title="В избранное">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
           </button>
         </div>
 
         <div class="product-share">
-          <span>РџРѕРґРµР»РёС‚СЊСЃСЏ:</span>
+          <span>Поделиться:</span>
           <a href="#" class="share-btn telegram">Telegram</a>
           <a href="#" class="share-btn instagram">Instagram</a>
         </div>
       </div>
     </div>
 
-    <!-- Tabs -->
+    <!-- Вкладки -->
     <div class="product-tabs">
       <div class="tabs-header">
-        <button class="tab-btn active" data-tab="description" id="tab-description">РћРїРёСЃР°РЅРёРµ</button>
-        <button class="tab-btn" data-tab="specs" id="tab-specs">РҐР°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё</button>
-        <button class="tab-btn" data-tab="reviews" id="tab-reviews">РћС‚Р·С‹РІС‹</button>
+        <button class="tab-btn active" data-tab="description" id="tab-description">Описание</button>
+        <button class="tab-btn" data-tab="specs" id="tab-specs">Характеристики</button>
+        <button class="tab-btn" data-tab="reviews" id="tab-reviews">Отзывы</button>
       </div>
 
       <div class="tab-content active" id="tab-panel-description">
-        <div class="tab-text" id="product-description-text">
-          <!-- injected -->
-        </div>
+        <div class="tab-text" id="product-description-text"></div>
       </div>
 
       <div class="tab-content" id="tab-panel-specs">
-        <table class="specs-table" id="specs-table">
-          <!-- injected -->
-        </table>
+        <table class="specs-table" id="specs-table"></table>
       </div>
 
       <div class="tab-content" id="tab-panel-reviews">
         <div class="reviews-section">
           <div class="no-reviews" id="no-reviews-msg">
-            <p>РћС‚Р·С‹РІРѕРІ РїРѕРєР° РЅРµС‚. Р‘СѓРґСЊС‚Рµ РїРµСЂРІС‹РјРё!</p>
+            <p>Отзывов пока нет. Будьте первыми!</p>
           </div>
-          <div class="reviews-list-big" id="reviews-list">
-            <!-- injected -->
-          </div>
+          <div class="reviews-list-big" id="reviews-list"></div>
           <div class="review-form-wrap">
-            <h3>РќР°РїРёСЃР°С‚СЊ РѕС‚Р·С‹РІ</h3>
+            <h3>Написать отзыв</h3>
             <form class="review-form" id="review-form" onsubmit="submitReview(event)">
               <div class="review-form-row">
                 <div class="form-group">
-                  <label>Р’Р°С€Рµ РёРјСЏ *</label>
-                  <input type="text" id="review-name" required placeholder="РРјСЏ"/>
+                  <label>Ваше имя *</label>
+                  <input type="text" id="review-name" required placeholder="Имя"/>
                 </div>
                 <div class="form-group">
-                  <label>РћС†РµРЅРєР° *</label>
+                  <label>Оценка *</label>
                   <div class="star-rating" id="star-rating">
-                    <span class="star" data-v="1">в…</span>
-                    <span class="star" data-v="2">в…</span>
-                    <span class="star" data-v="3">в…</span>
-                    <span class="star" data-v="4">в…</span>
-                    <span class="star" data-v="5">в…</span>
+                    <span class="star" data-v="1">★</span>
+                    <span class="star" data-v="2">★</span>
+                    <span class="star" data-v="3">★</span>
+                    <span class="star" data-v="4">★</span>
+                    <span class="star" data-v="5">★</span>
                   </div>
                   <input type="hidden" id="review-rating" value="5"/>
                 </div>
               </div>
               <div class="form-group">
-                <label>РћС‚Р·С‹РІ *</label>
-                <textarea id="review-text" required rows="4" placeholder="Р’Р°С€ РѕС‚Р·С‹РІ..."></textarea>
+                <label>Отзыв *</label>
+                <textarea id="review-text" required rows="4" placeholder="Ваш отзыв..."></textarea>
               </div>
-              <button type="submit" class="form-submit-btn">РћРўРџР РђР’РРўР¬ РћРўР—Р«Р’</button>
-              <div class="form-success" id="review-success" style="display:none">вњ“ РЎРїР°СЃРёР±Рѕ! Р’Р°С€ РѕС‚Р·С‹РІ РѕС‚РїСЂР°РІР»РµРЅ РЅР° РјРѕРґРµСЂР°С†РёСЋ.</div>
+              <button type="submit" class="form-submit-btn">ОТПРАВИТЬ ОТЗЫВ</button>
+              <div class="form-success" id="review-success" style="display:none">✓ Спасибо! Ваш отзыв отправлен на модерацию.</div>
             </form>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Related Products -->
+    <!-- Похожие товары -->
     <section class="related-products">
       <div class="section-header-line">
         <span class="section-accent"></span>
-        <h2 class="section-h2">Р Р•РљРћРњР•РќР”РћР’РђРќРќР«Р• РўРћР’РђР Р«</h2>
+        <h2 class="section-h2">РЕКОМЕНДОВАННЫЕ ТОВАРЫ</h2>
       </div>
       <div class="related-slider-wrap">
         <button class="slider-nav prev" id="rel-prev">&#8249;</button>
         <div class="related-track-outer">
-          <div class="related-track" id="related-track">
-            <!-- injected -->
-          </div>
+          <div class="related-track" id="related-track"></div>
         </div>
         <button class="slider-nav next" id="rel-next">&#8250;</button>
       </div>
@@ -153,4 +144,3 @@
 <script src="product.js"></script>
 </body>
 </html>
-

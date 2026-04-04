@@ -1,8 +1,8 @@
-﻿// =============================================
-// HOME UA - CLONE JAVASCRIPT
+// =============================================
+// HOME RU - КЛОН JAVASCRIPT
 // =============================================
 
-// --- HERO SLIDER ---
+// --- ГЛАВНЫЙ СЛАЙДЕР ---
 let currentSlide = 0;
 const totalSlides = 3;
 let autoSlideTimer;
@@ -21,26 +21,28 @@ function nextSlide() {
 }
 
 function startAutoSlide() {
-  autoSlideTimer = setInterval(nextSlide, 4000);
+  autoSlideTimer = setInterval(nextSlide, 5000);
 }
 
 function stopAutoSlide() {
   clearInterval(autoSlideTimer);
 }
 
-// Init slider
+// Инициализация слайдера
 document.addEventListener('DOMContentLoaded', () => {
-  goToSlide(0);
-  startAutoSlide();
+  if (document.getElementById('slides-wrapper')) {
+    goToSlide(0);
+    startAutoSlide();
 
-  const sliderEl = document.querySelector('.slider-container');
-  if (sliderEl) {
-    sliderEl.addEventListener('mouseenter', stopAutoSlide);
-    sliderEl.addEventListener('mouseleave', startAutoSlide);
+    const sliderEl = document.querySelector('.slider-container');
+    if (sliderEl) {
+      sliderEl.addEventListener('mouseenter', stopAutoSlide);
+      sliderEl.addEventListener('mouseleave', startAutoSlide);
+    }
   }
 });
 
-// --- PRODUCTS SLIDER ---
+// --- СЛАЙДЕР ТОВАРОВ ---
 let productOffset = 0;
 const productCardWidth = () => {
   const card = document.querySelector('.products-track .product-card');
@@ -62,7 +64,7 @@ function slideProducts(direction) {
   track.style.transform = `translateX(-${productOffset * cardW}px)`;
 }
 
-// --- SEARCH OVERLAY ---
+// --- ПОИСК (OVERLAY) ---
 const searchBtn = document.getElementById('search-btn');
 const searchOverlay = document.getElementById('search-overlay');
 const searchClose = document.getElementById('search-close');
@@ -70,12 +72,14 @@ const searchInput = document.getElementById('search-input');
 
 if (searchBtn) {
   searchBtn.addEventListener('click', () => {
-    searchOverlay.classList.add('open');
-    setTimeout(() => searchInput && searchInput.focus(), 100);
+    if (searchOverlay) {
+        searchOverlay.classList.add('open');
+        setTimeout(() => searchInput && searchInput.focus(), 100);
+    }
   });
 }
 
-if (searchClose) {
+if (searchClose && searchOverlay) {
   searchClose.addEventListener('click', () => {
     searchOverlay.classList.remove('open');
   });
@@ -88,81 +92,53 @@ if (searchOverlay) {
 }
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') searchOverlay && searchOverlay.classList.remove('open');
+  if (e.key === 'Escape' && searchOverlay) searchOverlay.classList.remove('open');
 });
 
-// --- CART BUTTON ---
-let cartCount = 0;
-document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-  btn.addEventListener('click', function () {
-    cartCount++;
-    const badge = document.querySelector('.cart-badge');
-    if (badge) badge.textContent = cartCount;
-
-    this.textContent = 'Р”РѕРґР°РЅРѕ вњ“';
-    this.style.background = '#27425b';
-    this.style.color = 'white';
+// --- КНОПКА КОРЗИНЫ (ОБЩАЯ ЛОГИКА) ---
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('add-to-cart-btn')) {
+    const btn = e.target;
+    // Логика добавления обычно вынесена в components.js или страницы
+    // Здесь просто визуальный эффект если нужно
+    const originalText = btn.textContent;
+    btn.textContent = 'Добавлено ✓';
+    btn.style.background = '#27425b';
+    btn.style.color = 'white';
     setTimeout(() => {
-      this.textContent = 'Р”Рѕ РєРѕС€РёРєР°';
-      this.style.background = '';
-      this.style.color = '';
+      btn.textContent = originalText;
+      btn.style.background = '';
+      btn.style.color = '';
     }, 1500);
-  });
+  }
 });
 
-// --- LANG SWITCHER ---
-document.getElementById('lang-ua') && document.getElementById('lang-ua').addEventListener('click', () => {
-  document.getElementById('lang-ua').classList.add('active');
-  document.getElementById('lang-ru').classList.remove('active');
-});
-document.getElementById('lang-ru') && document.getElementById('lang-ru').addEventListener('click', () => {
-  document.getElementById('lang-ru').classList.add('active');
-  document.getElementById('lang-ua').classList.remove('active');
+// --- ОБРАТНЫЙ ЗВОНОК ---
+document.addEventListener('click', (e) => {
+  if (e.target.id === 'callback-btn') {
+    alert('Свяжитесь с нами по телефону: +7 (999) 123-45-67');
+  }
 });
 
-// --- CALLBACK BUTTON ---
-const callbackBtn = document.getElementById('callback-btn');
-if (callbackBtn) {
-  callbackBtn.addEventListener('click', () => {
-    alert('Р—Р°С‚РµР»РµС„РѕРЅСѓР№С‚Рµ РЅР°Рј: +38 (067) 562-28-82');
-  });
-}
-
-// --- CHAT WIDGET ---
+// --- ВИДЖЕТ ЧАТА ---
 const chatWidget = document.getElementById('chat-widget');
 if (chatWidget) {
   chatWidget.addEventListener('click', () => {
-    alert('Р§Р°С‚ РїС–РґС‚СЂРёРјРєРё Р±СѓРґРµ РґРѕСЃС‚СѓРїРЅРёР№ РЅР°Р№Р±Р»РёР¶С‡РёРј С‡Р°СЃРѕРј!');
+    alert('Чат поддержки будет доступен в ближайшее время!');
   });
 }
 
-// --- STICKY HEADER SHADOW ---
+// --- ТЕНЬ ШАПКИ ПРИ СКРОЛЛЕ ---
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.site-header');
   if (header) {
     header.style.boxShadow = window.scrollY > 10
-      ? '0 4px 20px rgba(39,66,91,0.15)'
-      : '0 2px 8px rgba(0,0,0,0.08)';
+      ? '0 4 px 20px rgba(39,66,91,0.15)'
+      : '0 2 px 8px rgba(0,0,0,0.08)';
   }
 });
 
-// --- CATEGORIES HOVER (mobile support) ---
-const categoriesTrigger = document.getElementById('categories-trigger');
-const categoriesMenu = document.getElementById('categories-menu');
-
-if (categoriesTrigger && categoriesMenu) {
-  categoriesTrigger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = categoriesMenu.style.display === 'block';
-    categoriesMenu.style.display = isOpen ? 'none' : 'block';
-  });
-
-  document.addEventListener('click', () => {
-    if (categoriesMenu) categoriesMenu.style.display = 'none';
-  });
-}
-
-// --- SMOOTH FADE IN ANIMATION ---
+// --- АНИМАЦИЯ ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ ---
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -173,10 +149,13 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.product-card, .benefit-item, .banner-item, .icon-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+function initScrollAnimations() {
+    document.querySelectorAll('.product-card, .benefit-item, .banner-item, .icon-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+}
 
+document.addEventListener('DOMContentLoaded', initScrollAnimations);

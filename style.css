@@ -663,7 +663,12 @@ body {
   font-size: 13px;
   color: var(--text-dark);
   line-height: 1.4;
-  flex: 1;
+  height: 3.6em; /* Support for 2-3 lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2.5; /* Show approx 2.5 lines */
+  -webkit-box-orient: vertical;
+  flex: none;
 }
 
 .product-footer {
@@ -677,24 +682,28 @@ body {
   font-size: 15px;
   font-weight: 700;
   color: var(--navy);
+  white-space: nowrap; /* Prevent ₽ from wrapping */
 }
 
 .add-to-cart-btn {
-  background: none;
-  border: none;
-  color: var(--navy);
-  font-size: 12px;
+  background: var(--navy-light);
+  border: 1px solid var(--navy-light);
+  color: white;
+  font-size: 11px;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  padding: 6px 10px;
-  transition: background 0.2s, color 0.2s;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s;
   white-space: nowrap;
 }
 
 .add-to-cart-btn:hover {
   background: var(--navy);
+  border-color: var(--navy);
   color: white;
+  transform: translateY(-1px);
 }
 
 /* Products arrows */
