@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Акции и скидки — Home UA</title>
-  <meta name="description" content="Товары со скидкой в интернет-магазине Home UA. Акционные предложения от ведущих европейских производителей."/>
+  <title>РђРєС†РёРё Рё СЃРєРёРґРєРё вЂ” Home UA</title>
+  <meta name="description" content="РўРѕРІР°СЂС‹ СЃРѕ СЃРєРёРґРєРѕР№ РІ РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅРµ Home UA. РђРєС†РёРѕРЅРЅС‹Рµ РїСЂРµРґР»РѕР¶РµРЅРёСЏ РѕС‚ РІРµРґСѓС‰РёС… РµРІСЂРѕРїРµР№СЃРєРёС… РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -16,46 +16,46 @@
 <main class="page-main">
   <div class="container">
     <nav class="breadcrumb">
-      <a href="index.html">Главная</a>
-      <span>›</span>
-      <span>Акции</span>
+      <a href="index.html">Р“Р»Р°РІРЅР°СЏ</a>
+      <span>вЂє</span>
+      <span>РђРєС†РёРё</span>
     </nav>
 
     <div class="page-layout">
       <!-- Sidebar -->
       <aside class="page-sidebar">
         <div class="sidebar-block">
-          <h3 class="sidebar-title accent-title">ФИЛЬТР ЦЕНЫ</h3>
+          <h3 class="sidebar-title accent-title">Р¤РР›Р¬РўР  Р¦Р•РќР«</h3>
           <div class="price-filter">
             <div class="price-range-row">
-              <span>от</span>
+              <span>РѕС‚</span>
               <input type="number" id="price-from" value="0" min="0" max="50000" class="price-input"/>
-              <span>до</span>
+              <span>РґРѕ</span>
               <input type="number" id="price-to" value="50000" min="0" max="50000" class="price-input"/>
-              <span>₴</span>
+              <span>в‚ґ</span>
             </div>
             <input type="range" id="price-slider" min="0" max="50000" value="50000" class="price-slider"/>
-            <button class="filter-btn" onclick="applyPriceFilter()">ПРИМЕНИТЬ</button>
+            <button class="filter-btn" onclick="applyPriceFilter()">РџР РРњР•РќРРўР¬</button>
           </div>
         </div>
 
         <div class="sidebar-block sidebar-rating">
-          <h3 class="sidebar-title accent-title pink">ОЦЕНКИ МАГАЗИНА</h3>
-          <p class="rating-label">Средняя оценка магазина</p>
+          <h3 class="sidebar-title accent-title pink">РћР¦Р•РќРљР РњРђР“РђР—РРќРђ</h3>
+          <p class="rating-label">РЎСЂРµРґРЅСЏСЏ РѕС†РµРЅРєР° РјР°РіР°Р·РёРЅР°</p>
           <div class="rating-score">5</div>
-          <div class="rating-stars">★★★★★</div>
-          <p class="rating-count">Всего оценок: 4</p>
+          <div class="rating-stars">в…в…в…в…в…</div>
+          <p class="rating-count">Р’СЃРµРіРѕ РѕС†РµРЅРѕРє: 4</p>
           <div class="reviews-list">
             <div class="review-item">
-              <strong>Марина</strong><span class="review-stars">★★★★★</span>
-              <p>Спасибо за доставку день-в-день!</p>
+              <strong>РњР°СЂРёРЅР°</strong><span class="review-stars">в…в…в…в…в…</span>
+              <p>РЎРїР°СЃРёР±Рѕ Р·Р° РґРѕСЃС‚Р°РІРєСѓ РґРµРЅСЊ-РІ-РґРµРЅСЊ!</p>
             </div>
             <div class="review-item">
-              <strong>Екатерина</strong><span class="review-stars">★★★★★</span>
-              <p>Шикарное качество товара!</p>
+              <strong>Р•РєР°С‚РµСЂРёРЅР°</strong><span class="review-stars">в…в…в…в…в…</span>
+              <p>РЁРёРєР°СЂРЅРѕРµ РєР°С‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР°!</p>
             </div>
           </div>
-          <a href="#" class="btn-reviews">ПОСМОТРЕТЬ ВСЕ ОТЗЫВЫ</a>
+          <a href="#" class="btn-reviews">РџРћРЎРњРћРўР Р•РўР¬ Р’РЎР• РћРўР—Р«Р’Р«</a>
         </div>
       </aside>
 
@@ -63,19 +63,19 @@
       <article class="page-content">
         <div class="content-header">
           <span class="section-accent"></span>
-          <h1 class="content-title">ТОВАРЫ СО СКИДКОЙ</h1>
+          <h1 class="content-title">РўРћР’РђР Р« РЎРћ РЎРљРР”РљРћР™</h1>
         </div>
 
         <div class="sale-toolbar">
-          <span class="sale-count" id="sale-count">Найдено: 12 товаров</span>
+          <span class="sale-count" id="sale-count">РќР°Р№РґРµРЅРѕ: 12 С‚РѕРІР°СЂРѕРІ</span>
           <div class="sort-wrap">
-            <label>Сортировка:</label>
+            <label>РЎРѕСЂС‚РёСЂРѕРІРєР°:</label>
             <select id="sort-select" onchange="sortProducts(this.value)" class="sort-select">
-              <option value="default">По умолчанию</option>
-              <option value="price-asc">Цена (возрастание)</option>
-              <option value="price-desc">Цена (убывание)</option>
-              <option value="name-asc">Название (А-Я)</option>
-              <option value="discount">По скидке</option>
+              <option value="default">РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ</option>
+              <option value="price-asc">Р¦РµРЅР° (РІРѕР·СЂР°СЃС‚Р°РЅРёРµ)</option>
+              <option value="price-desc">Р¦РµРЅР° (СѓР±С‹РІР°РЅРёРµ)</option>
+              <option value="name-asc">РќР°Р·РІР°РЅРёРµ (Рђ-РЇ)</option>
+              <option value="discount">РџРѕ СЃРєРёРґРєРµ</option>
             </select>
           </div>
         </div>
@@ -85,16 +85,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-30%</span>
-              <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Обеденный стул жёлтый"/>
+              <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» Р¶С‘Р»С‚С‹Р№"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Обеденный стул J-LINE плетёный в стиле бистро с открытой спинкой жёлтый</div>
+              <div class="product-name">РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE РїР»РµС‚С‘РЅС‹Р№ РІ СЃС‚РёР»Рµ Р±РёСЃС‚СЂРѕ СЃ РѕС‚РєСЂС‹С‚РѕР№ СЃРїРёРЅРєРѕР№ Р¶С‘Р»С‚С‹Р№</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">14 960 ₴</span>
-                  <span class="product-old-price">21 370 ₴</span>
+                  <span class="product-price">14 960 в‚ґ</span>
+                  <span class="product-old-price">21 370 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -102,16 +102,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-30%</span>
-              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Обеденный стул розовый"/>
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» СЂРѕР·РѕРІС‹Р№"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Обеденный стул J-LINE плетёный в стиле бистро с открытой розовой спинкой</div>
+              <div class="product-name">РћР±РµРґРµРЅРЅС‹Р№ СЃС‚СѓР» J-LINE РїР»РµС‚С‘РЅС‹Р№ РІ СЃС‚РёР»Рµ Р±РёСЃС‚СЂРѕ СЃ РѕС‚РєСЂС‹С‚РѕР№ СЂРѕР·РѕРІРѕР№ СЃРїРёРЅРєРѕР№</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">14 960 ₴</span>
-                  <span class="product-old-price">21 370 ₴</span>
+                  <span class="product-price">14 960 в‚ґ</span>
+                  <span class="product-old-price">21 370 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -119,16 +119,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-20%</span>
-              <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80" alt="Статуэтка бульдог"/>
+              <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80" alt="РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Статуэтка бульдог J-LINE баскетболист белая с мячом спортивная высота 25 см</div>
+              <div class="product-name">РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE Р±Р°СЃРєРµС‚Р±РѕР»РёСЃС‚ Р±РµР»Р°СЏ СЃ РјСЏС‡РѕРј СЃРїРѕСЂС‚РёРІРЅР°СЏ РІС‹СЃРѕС‚Р° 25 СЃРј</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">2 920 ₴</span>
-                  <span class="product-old-price">3 650 ₴</span>
+                  <span class="product-price">2 920 в‚ґ</span>
+                  <span class="product-old-price">3 650 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -136,16 +136,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-15%</span>
-              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Ваза Amadeus"/>
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Р’Р°Р·Р° Amadeus"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Ваза с ручкой AMADEUS с потёками краски высота 19 см Франция</div>
+              <div class="product-name">Р’Р°Р·Р° СЃ СЂСѓС‡РєРѕР№ AMADEUS СЃ РїРѕС‚С‘РєР°РјРё РєСЂР°СЃРєРё РІС‹СЃРѕС‚Р° 19 СЃРј Р¤СЂР°РЅС†РёСЏ</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">1 870 ₴</span>
-                  <span class="product-old-price">2 200 ₴</span>
+                  <span class="product-price">1 870 в‚ґ</span>
+                  <span class="product-old-price">2 200 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -153,16 +153,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-25%</span>
-              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80" alt="Статуэтка бульдог гантель"/>
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80" alt="РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі РіР°РЅС‚РµР»СЊ"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Статуэтка бульдог J-LINE с гантелью белая спортивная высота 25 см</div>
+              <div class="product-name">РЎС‚Р°С‚СѓСЌС‚РєР° Р±СѓР»СЊРґРѕРі J-LINE СЃ РіР°РЅС‚РµР»СЊСЋ Р±РµР»Р°СЏ СЃРїРѕСЂС‚РёРІРЅР°СЏ РІС‹СЃРѕС‚Р° 25 СЃРј</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">2 920 ₴</span>
-                  <span class="product-old-price">3 893 ₴</span>
+                  <span class="product-price">2 920 в‚ґ</span>
+                  <span class="product-old-price">3 893 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -170,16 +170,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-10%</span>
-              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80" alt="Фоторамка J-LINE"/>
+              <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80" alt="Р¤РѕС‚РѕСЂР°РјРєР° J-LINE"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Фоторамка J-LINE металлическая серебряная с полосками 13x18 см Бельгия</div>
+              <div class="product-name">Р¤РѕС‚РѕСЂР°РјРєР° J-LINE РјРµС‚Р°Р»Р»РёС‡РµСЃРєР°СЏ СЃРµСЂРµР±СЂСЏРЅР°СЏ СЃ РїРѕР»РѕСЃРєР°РјРё 13x18 СЃРј Р‘РµР»СЊРіРёСЏ</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">680 ₴</span>
-                  <span class="product-old-price">755 ₴</span>
+                  <span class="product-price">680 в‚ґ</span>
+                  <span class="product-old-price">755 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -187,16 +187,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-20%</span>
-              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80" alt="Кольца для салфеток"/>
+              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80" alt="РљРѕР»СЊС†Р° РґР»СЏ СЃР°Р»С„РµС‚РѕРє"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Кольца для салфеток J-LINE из бамбука комплект 6 шт. натурального цвета</div>
+              <div class="product-name">РљРѕР»СЊС†Р° РґР»СЏ СЃР°Р»С„РµС‚РѕРє J-LINE РёР· Р±Р°РјР±СѓРєР° РєРѕРјРїР»РµРєС‚ 6 С€С‚. РЅР°С‚СѓСЂР°Р»СЊРЅРѕРіРѕ С†РІРµС‚Р°</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">880 ₴</span>
-                  <span class="product-old-price">1 100 ₴</span>
+                  <span class="product-price">880 в‚ґ</span>
+                  <span class="product-old-price">1 100 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -204,16 +204,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-30%</span>
-              <img src="https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80" alt="Статуэтка силуэт"/>
+              <img src="https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80" alt="РЎС‚Р°С‚СѓСЌС‚РєР° СЃРёР»СѓСЌС‚"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Статуэтка Light&Living силуэт девушки чёрного цвета</div>
+              <div class="product-name">РЎС‚Р°С‚СѓСЌС‚РєР° Light&Living СЃРёР»СѓСЌС‚ РґРµРІСѓС€РєРё С‡С‘СЂРЅРѕРіРѕ С†РІРµС‚Р°</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">6 130 ₴</span>
-                  <span class="product-old-price">8 757 ₴</span>
+                  <span class="product-price">6 130 в‚ґ</span>
+                  <span class="product-old-price">8 757 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -221,16 +221,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-15%</span>
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Торшер"/>
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="РўРѕСЂС€РµСЂ"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Торшер J-LINE плетёный из ротанга натуральный высота 133 см</div>
+              <div class="product-name">РўРѕСЂС€РµСЂ J-LINE РїР»РµС‚С‘РЅС‹Р№ РёР· СЂРѕС‚Р°РЅРіР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹Р№ РІС‹СЃРѕС‚Р° 133 СЃРј</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">13 530 ₴</span>
-                  <span class="product-old-price">15 918 ₴</span>
+                  <span class="product-price">13 530 в‚ґ</span>
+                  <span class="product-old-price">15 918 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -238,16 +238,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-20%</span>
-              <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80" alt="Ваза декоративная"/>
+              <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80" alt="Р’Р°Р·Р° РґРµРєРѕСЂР°С‚РёРІРЅР°СЏ"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Ваза декоративная керамическая ручная работа высота 30 см</div>
+              <div class="product-name">Р’Р°Р·Р° РґРµРєРѕСЂР°С‚РёРІРЅР°СЏ РєРµСЂР°РјРёС‡РµСЃРєР°СЏ СЂСѓС‡РЅР°СЏ СЂР°Р±РѕС‚Р° РІС‹СЃРѕС‚Р° 30 СЃРј</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">3 240 ₴</span>
-                  <span class="product-old-price">4 050 ₴</span>
+                  <span class="product-price">3 240 в‚ґ</span>
+                  <span class="product-old-price">4 050 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -255,16 +255,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-25%</span>
-              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80" alt="Подсвечник"/>
+              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80" alt="РџРѕРґСЃРІРµС‡РЅРёРє"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Подсвечник J-LINE стеклянный с объёмными элементами высота 20 см</div>
+              <div class="product-name">РџРѕРґСЃРІРµС‡РЅРёРє J-LINE СЃС‚РµРєР»СЏРЅРЅС‹Р№ СЃ РѕР±СЉС‘РјРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё РІС‹СЃРѕС‚Р° 20 СЃРј</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">825 ₴</span>
-                  <span class="product-old-price">1 100 ₴</span>
+                  <span class="product-price">825 в‚ґ</span>
+                  <span class="product-old-price">1 100 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -272,16 +272,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-10%</span>
-              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80" alt="Аромадиффузор"/>
+              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80" alt="РђСЂРѕРјР°РґРёС„С„СѓР·РѕСЂ"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Аромадиффузор J-LINE восточный аромат 200 мл Бельгия</div>
+              <div class="product-name">РђСЂРѕРјР°РґРёС„С„СѓР·РѕСЂ J-LINE РІРѕСЃС‚РѕС‡РЅС‹Р№ Р°СЂРѕРјР°С‚ 200 РјР» Р‘РµР»СЊРіРёСЏ</div>
               <div class="product-footer">
                 <div>
-                  <span class="product-price">2 470 ₴</span>
-                  <span class="product-old-price">2 744 ₴</span>
+                  <span class="product-price">2 470 в‚ґ</span>
+                  <span class="product-old-price">2 744 в‚ґ</span>
                 </div>
-                <button class="add-to-cart-btn">В корзину</button>
+                <button class="add-to-cart-btn">Р’ РєРѕСЂР·РёРЅСѓ</button>
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@ function applyPriceFilter() {
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
-  document.getElementById('sale-count').textContent = `Найдено: ${visible} товаров`;
+  document.getElementById('sale-count').textContent = `РќР°Р№РґРµРЅРѕ: ${visible} С‚РѕРІР°СЂРѕРІ`;
 }
 
 function sortProducts(val) {
@@ -336,3 +336,4 @@ function sortProducts(val) {
 </script>
 </body>
 </html>
+

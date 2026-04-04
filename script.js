@@ -1,4 +1,4 @@
-// =============================================
+﻿// =============================================
 // HOME UA - CLONE JAVASCRIPT
 // =============================================
 
@@ -99,11 +99,11 @@ document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
     const badge = document.querySelector('.cart-badge');
     if (badge) badge.textContent = cartCount;
 
-    this.textContent = 'Додано ✓';
+    this.textContent = 'Р”РѕРґР°РЅРѕ вњ“';
     this.style.background = '#27425b';
     this.style.color = 'white';
     setTimeout(() => {
-      this.textContent = 'До кошика';
+      this.textContent = 'Р”Рѕ РєРѕС€РёРєР°';
       this.style.background = '';
       this.style.color = '';
     }, 1500);
@@ -124,7 +124,7 @@ document.getElementById('lang-ru') && document.getElementById('lang-ru').addEven
 const callbackBtn = document.getElementById('callback-btn');
 if (callbackBtn) {
   callbackBtn.addEventListener('click', () => {
-    alert('Зателефонуйте нам: +38 (067) 562-28-82');
+    alert('Р—Р°С‚РµР»РµС„РѕРЅСѓР№С‚Рµ РЅР°Рј: +38 (067) 562-28-82');
   });
 }
 
@@ -132,7 +132,7 @@ if (callbackBtn) {
 const chatWidget = document.getElementById('chat-widget');
 if (chatWidget) {
   chatWidget.addEventListener('click', () => {
-    alert('Чат підтримки буде доступний найближчим часом!');
+    alert('Р§Р°С‚ РїС–РґС‚СЂРёРјРєРё Р±СѓРґРµ РґРѕСЃС‚СѓРїРЅРёР№ РЅР°Р№Р±Р»РёР¶С‡РёРј С‡Р°СЃРѕРј!');
   });
 }
 
@@ -179,3 +179,4 @@ document.querySelectorAll('.product-card, .benefit-item, .banner-item, .icon-ite
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
