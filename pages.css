@@ -328,6 +328,11 @@
 .page-btn:hover, .page-btn.active {
   background: var(--navy); color: white; border-color: var(--navy);
 }
+.page-dots {
+  min-width: 36px; height: 36px; display: flex; align-items: center;
+  justify-content: center; color: var(--text-light); font-size: 13px;
+  pointer-events: none;
+}
 
 @media (max-width: 900px) {
   .page-layout { grid-template-columns: 1fr; }

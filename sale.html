@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="ru">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Акції та знижки — Home UA</title>
-  <meta name="description" content="Товари зі знижкою в інтернет-магазині Home UA. Акційні пропозиції від провідних європейських виробників."/>
+  <title>Акции и скидки — Home UA</title>
+  <meta name="description" content="Товары со скидкой в интернет-магазине Home UA. Акционные предложения от ведущих европейских производителей."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -16,46 +16,46 @@
 <main class="page-main">
   <div class="container">
     <nav class="breadcrumb">
-      <a href="index.html">Головна</a>
+      <a href="index.html">Главная</a>
       <span>›</span>
-      <span>Акції</span>
+      <span>Акции</span>
     </nav>
 
     <div class="page-layout">
       <!-- Sidebar -->
       <aside class="page-sidebar">
         <div class="sidebar-block">
-          <h3 class="sidebar-title accent-title">ФІЛЬТР ЦІНИ</h3>
+          <h3 class="sidebar-title accent-title">ФИЛЬТР ЦЕНЫ</h3>
           <div class="price-filter">
             <div class="price-range-row">
-              <span>від</span>
+              <span>от</span>
               <input type="number" id="price-from" value="0" min="0" max="50000" class="price-input"/>
               <span>до</span>
               <input type="number" id="price-to" value="50000" min="0" max="50000" class="price-input"/>
               <span>₴</span>
             </div>
             <input type="range" id="price-slider" min="0" max="50000" value="50000" class="price-slider"/>
-            <button class="filter-btn" onclick="applyPriceFilter()">ЗАСТОСУВАТИ</button>
+            <button class="filter-btn" onclick="applyPriceFilter()">ПРИМЕНИТЬ</button>
           </div>
         </div>
 
         <div class="sidebar-block sidebar-rating">
-          <h3 class="sidebar-title accent-title pink">ОЦІНКИ МАГАЗИНУ</h3>
-          <p class="rating-label">Середня оцінка магазину</p>
+          <h3 class="sidebar-title accent-title pink">ОЦЕНКИ МАГАЗИНА</h3>
+          <p class="rating-label">Средняя оценка магазина</p>
           <div class="rating-score">5</div>
           <div class="rating-stars">★★★★★</div>
-          <p class="rating-count">Всього оцінок: 4</p>
+          <p class="rating-count">Всего оценок: 4</p>
           <div class="reviews-list">
             <div class="review-item">
               <strong>Марина</strong><span class="review-stars">★★★★★</span>
-              <p>Дякую за доставку день-в-день!</p>
+              <p>Спасибо за доставку день-в-день!</p>
             </div>
             <div class="review-item">
-              <strong>Катерина</strong><span class="review-stars">★★★★★</span>
-              <p>Шикарна якість товару!</p>
+              <strong>Екатерина</strong><span class="review-stars">★★★★★</span>
+              <p>Шикарное качество товара!</p>
             </div>
           </div>
-          <a href="#" class="btn-reviews">ПЕРЕГЛЯНУТИ ІНШІ ОЦІНКИ ТА ВІДГУКИ</a>
+          <a href="#" class="btn-reviews">ПОСМОТРЕТЬ ВСЕ ОТЗЫВЫ</a>
         </div>
       </aside>
 
@@ -63,19 +63,19 @@
       <article class="page-content">
         <div class="content-header">
           <span class="section-accent"></span>
-          <h1 class="content-title">ТОВАРИ ЗІ ЗНИЖКОЮ</h1>
+          <h1 class="content-title">ТОВАРЫ СО СКИДКОЙ</h1>
         </div>
 
         <div class="sale-toolbar">
-          <span class="sale-count" id="sale-count">Знайдено: 12 товарів</span>
+          <span class="sale-count" id="sale-count">Найдено: 12 товаров</span>
           <div class="sort-wrap">
-            <label>Сортування:</label>
+            <label>Сортировка:</label>
             <select id="sort-select" onchange="sortProducts(this.value)" class="sort-select">
-              <option value="default">За замовчуванням</option>
-              <option value="price-asc">Ціна (зростання)</option>
-              <option value="price-desc">Ціна (спадання)</option>
-              <option value="name-asc">Назва (А-Я)</option>
-              <option value="discount">За знижкою</option>
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Цена (возрастание)</option>
+              <option value="price-desc">Цена (убывание)</option>
+              <option value="name-asc">Название (А-Я)</option>
+              <option value="discount">По скидке</option>
             </select>
           </div>
         </div>
@@ -85,16 +85,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-30%</span>
-              <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Обідній стілець жовтий"/>
+              <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Обеденный стул жёлтый"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Обідній стілець J-LINE плетений у стилі бістро з відкритою спинкою жовтий</div>
+              <div class="product-name">Обеденный стул J-LINE плетёный в стиле бистро с открытой спинкой жёлтый</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">14 960 ₴</span>
                   <span class="product-old-price">21 370 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -102,16 +102,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-30%</span>
-              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Обідній стілець рожевий"/>
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Обеденный стул розовый"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Обідній стілець J-LINE плетений у стилі бістро з відкритою рожевою спинкою</div>
+              <div class="product-name">Обеденный стул J-LINE плетёный в стиле бистро с открытой розовой спинкой</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">14 960 ₴</span>
                   <span class="product-old-price">21 370 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -119,16 +119,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-20%</span>
-              <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80" alt="Статуетка бульдог"/>
+              <img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80" alt="Статуэтка бульдог"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Статуетка бульдог J-LINE баскетболіст біла з м'ячем спортивна висота 25 см</div>
+              <div class="product-name">Статуэтка бульдог J-LINE баскетболист белая с мячом спортивная высота 25 см</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">2 920 ₴</span>
                   <span class="product-old-price">3 650 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -139,13 +139,13 @@
               <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Ваза Amadeus"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Ваза з ручкою AMADEUS із потіками фарби висота 19 см Франція</div>
+              <div class="product-name">Ваза с ручкой AMADEUS с потёками краски высота 19 см Франция</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">1 870 ₴</span>
                   <span class="product-old-price">2 200 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -153,16 +153,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-25%</span>
-              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80" alt="Статуетка бульдог гантеля"/>
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35a7?w=400&q=80" alt="Статуэтка бульдог гантель"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Статуетка бульдог J-LINE з гантеллю біла спортивна висота 25 см</div>
+              <div class="product-name">Статуэтка бульдог J-LINE с гантелью белая спортивная высота 25 см</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">2 920 ₴</span>
                   <span class="product-old-price">3 893 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -173,13 +173,13 @@
               <img src="https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80" alt="Фоторамка J-LINE"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Фоторамка J-LINE металева срібного кольору зі смужками 13x18 см Бельгія</div>
+              <div class="product-name">Фоторамка J-LINE металлическая серебряная с полосками 13x18 см Бельгия</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">680 ₴</span>
                   <span class="product-old-price">755 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -187,16 +187,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-20%</span>
-              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80" alt="Кільця для серветок"/>
+              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80" alt="Кольца для салфеток"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Кільця для серветок J-LINE із бамбука комплект із 6 натурального кольору</div>
+              <div class="product-name">Кольца для салфеток J-LINE из бамбука комплект 6 шт. натурального цвета</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">880 ₴</span>
                   <span class="product-old-price">1 100 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -204,16 +204,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-30%</span>
-              <img src="https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80" alt="Статуетка силует"/>
+              <img src="https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80" alt="Статуэтка силуэт"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Статуетка Light&Living силует дівчини чорного кольору</div>
+              <div class="product-name">Статуэтка Light&Living силуэт девушки чёрного цвета</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">6 130 ₴</span>
                   <span class="product-old-price">8 757 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -221,16 +221,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-15%</span>
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Підлогова лампа"/>
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Торшер"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Підлогова лампа J-LINE плетена з ротанга натуральна висота 133 см</div>
+              <div class="product-name">Торшер J-LINE плетёный из ротанга натуральный высота 133 см</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">13 530 ₴</span>
                   <span class="product-old-price">15 918 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -238,16 +238,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-20%</span>
-              <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80" alt="Ваза декоративна"/>
+              <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80" alt="Ваза декоративная"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Ваза декоративна керамічна ручна робота висота 30 см</div>
+              <div class="product-name">Ваза декоративная керамическая ручная работа высота 30 см</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">3 240 ₴</span>
                   <span class="product-old-price">4 050 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -255,16 +255,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-25%</span>
-              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80" alt="Свічник"/>
+              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=400&q=80" alt="Подсвечник"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Свічник J-LINE скляний з об'ємними елементами висота 20 см</div>
+              <div class="product-name">Подсвечник J-LINE стеклянный с объёмными элементами высота 20 см</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">825 ₴</span>
                   <span class="product-old-price">1 100 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -272,16 +272,16 @@
           <div class="product-card sale-card">
             <div class="product-img-wrap">
               <span class="sale-badge">-10%</span>
-              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80" alt="Аромадифузор"/>
+              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=400&q=80" alt="Аромадиффузор"/>
             </div>
             <div class="product-info">
-              <div class="product-name">Аромадифузор J-LINE аромат східний 200 мл Бельгія</div>
+              <div class="product-name">Аромадиффузор J-LINE восточный аромат 200 мл Бельгия</div>
               <div class="product-footer">
                 <div>
                   <span class="product-price">2 470 ₴</span>
                   <span class="product-old-price">2 744 ₴</span>
                 </div>
-                <button class="add-to-cart-btn">До кошика</button>
+                <button class="add-to-cart-btn">В корзину</button>
               </div>
             </div>
           </div>
@@ -312,7 +312,7 @@ function applyPriceFilter() {
     card.style.display = show ? '' : 'none';
     if (show) visible++;
   });
-  document.getElementById('sale-count').textContent = `Знайдено: ${visible} товарів`;
+  document.getElementById('sale-count').textContent = `Найдено: ${visible} товаров`;
 }
 
 function sortProducts(val) {

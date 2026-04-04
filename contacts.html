@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="ru">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Контакти — Home UA</title>
-  <meta name="description" content="Зв'яжіться з нами — телефон, email, адреса та форма зворотного зв'язку."/>
+  <title>Контакты — Home UA</title>
+  <meta name="description" content="Свяжитесь с нами — телефон, email, адрес и форма обратной связи."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -16,40 +16,40 @@
 <main class="page-main">
   <div class="container">
     <nav class="breadcrumb">
-      <a href="index.html">Головна</a>
+      <a href="index.html">Главная</a>
       <span>›</span>
-      <span>Контакти</span>
+      <span>Контакты</span>
     </nav>
 
     <div class="page-layout">
       <!-- Sidebar -->
       <aside class="page-sidebar">
         <div class="sidebar-block sidebar-recommended">
-          <h3 class="sidebar-title accent-title">РЕКОМЕНДОВАНІ</h3>
+          <h3 class="sidebar-title accent-title">РЕКОМЕНДУЕМЫЕ</h3>
           <div class="sidebar-products">
             <a href="#" class="sidebar-product">
-              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=80&q=80" alt="Свічник J-LINE"/>
+              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=80&q=80" alt="Подсвечник J-LINE"/>
               <div class="sidebar-product-info">
-                <span class="sidebar-product-name">Свічник J-LINE скляний з об'ємними...</span>
+                <span class="sidebar-product-name">Подсвечник J-LINE стеклянный с объём...</span>
                 <span class="sidebar-product-price">825 ₴</span>
               </div>
             </a>
             <a href="#" class="sidebar-product">
-              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=80&q=80" alt="Аромадифузор"/>
+              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=80&q=80" alt="Аромадиффузор"/>
               <div class="sidebar-product-info">
-                <span class="sidebar-product-name">Аромадифузор J-LINE аромат східний...</span>
+                <span class="sidebar-product-name">Аромадиффузор J-LINE восточный аром...</span>
                 <span class="sidebar-product-price">2 470 ₴</span>
               </div>
             </a>
           </div>
         </div>
         <div class="sidebar-block sidebar-rating">
-          <h3 class="sidebar-title accent-title pink">ОЦІНКИ МАГАЗИНУ</h3>
-          <p class="rating-label">Середня оцінка магазину</p>
+          <h3 class="sidebar-title accent-title pink">ОЦЕНКИ МАГАЗИНА</h3>
+          <p class="rating-label">Средняя оценка магазина</p>
           <div class="rating-score">5</div>
           <div class="rating-stars">★★★★★</div>
-          <p class="rating-count">Всього оцінок: 4</p>
-          <a href="#" class="btn-reviews">ПЕРЕГЛЯНУТИ ІНШІ ОЦІНКИ ТА ВІДГУКИ</a>
+          <p class="rating-count">Всего оценок: 4</p>
+          <a href="#" class="btn-reviews">ПОСМОТРЕТЬ ВСЕ ОТЗЫВЫ</a>
         </div>
       </aside>
 
@@ -57,14 +57,14 @@
       <article class="page-content">
         <div class="content-header">
           <span class="section-accent"></span>
-          <h1 class="content-title">КОНТАКТИ</h1>
+          <h1 class="content-title">КОНТАКТЫ</h1>
         </div>
 
         <div class="contacts-grid">
           <div class="contact-card">
             <div class="contact-icon">📍</div>
-            <h3>Наша адреса</h3>
-            <p>м. Дніпро, 49000, Україна</p>
+            <h3>Наш адрес</h3>
+            <p>г. Днепр, 49000, Украина</p>
           </div>
           <div class="contact-card">
             <div class="contact-icon">📞</div>
@@ -78,45 +78,45 @@
           </div>
           <div class="contact-card">
             <div class="contact-icon">🕐</div>
-            <h3>Графік роботи</h3>
-            <p>Пн–Нд: 10:00 – 20:00</p>
-            <p style="color:#27425b;font-weight:600;font-size:13px">Без вихідних</p>
+            <h3>График работы</h3>
+            <p>Пн–Вс: 10:00 – 20:00</p>
+            <p style="color:#27425b;font-weight:600;font-size:13px">Без выходных</p>
           </div>
         </div>
 
         <div class="contacts-layout">
           <!-- Contact Form -->
           <div class="contact-form-wrap">
-            <h2 class="content-h2">Напишіть нам</h2>
-            <p class="content-p">Заповніть форму нижче, і ми зв'яжемось з вами найближчим часом.</p>
+            <h2 class="content-h2">Напишите нам</h2>
+            <p class="content-p">Заполните форму ниже, и мы свяжемся с вами в ближайшее время.</p>
             <form class="contact-form" id="contact-form" onsubmit="submitContactForm(event)">
               <div class="form-group">
-                <label for="contact-name">Ваше ім'я *</label>
-                <input type="text" id="contact-name" name="name" placeholder="Введіть ваше ім'я" required/>
+                <label for="contact-name">Ваше имя *</label>
+                <input type="text" id="contact-name" name="name" placeholder="Введите ваше имя" required/>
               </div>
               <div class="form-group">
                 <label for="contact-email">Email *</label>
-                <input type="email" id="contact-email" name="email" placeholder="Введіть ваш email" required/>
+                <input type="email" id="contact-email" name="email" placeholder="Введите ваш email" required/>
               </div>
               <div class="form-group">
                 <label for="contact-phone">Телефон</label>
                 <input type="tel" id="contact-phone" name="phone" placeholder="+38 (___) ___-__-__"/>
               </div>
               <div class="form-group">
-                <label for="contact-message">Повідомлення *</label>
-                <textarea id="contact-message" name="message" rows="5" placeholder="Введіть ваше повідомлення..." required></textarea>
+                <label for="contact-message">Сообщение *</label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
               </div>
-              <button type="submit" class="form-submit-btn">ВІДПРАВИТИ ПОВІДОМЛЕННЯ</button>
+              <button type="submit" class="form-submit-btn">ОТПРАВИТЬ СООБЩЕНИЕ</button>
               <div class="form-success" id="form-success" style="display:none">
-                ✓ Дякуємо! Ваше повідомлення надіслано. Ми зв'яжемось з вами найближчим часом.
+                ✓ Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
               </div>
             </form>
           </div>
 
           <!-- Social links -->
           <div class="contact-socials-wrap">
-            <h2 class="content-h2">Ми в соцмережах</h2>
-            <p class="content-p">Слідкуйте за нами, щоб не пропустити нові надходження та акції:</p>
+            <h2 class="content-h2">Мы в соцсетях</h2>
+            <p class="content-p">Следите за нами, чтобы не пропустить новые поступления и акции:</p>
             <div class="social-links-list">
               <a href="#" class="social-link-item telegram-link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 13.617l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.942z"/></svg>
