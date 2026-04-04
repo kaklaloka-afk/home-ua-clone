@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>Home UA — Интернет-магазин декора, посуды и предметов интерьера европейских фабрик</title>
+  <meta name="description" content="Home UA — интернет-магазин декора, посуды и предметов интерьера от ведущих европейских фабрик. Широкий ассортимент, доставка по всей Украине."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+<!-- Shared header (injected by components.js) -->
+<div id="site-header-placeholder"></div>
+
+<!-- HERO SLIDER -->
+<section class="hero-slider" id="hero">
+  <div class="slider-container">
+    <div class="slides-wrapper" id="slides-wrapper">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <div class="slide-content">
+          <div class="slide-text">
+            <div class="sale-big">SALE</div>
+            <div class="sale-sub">СКИДКИ ДО</div>
+            <div class="sale-percent">-30%</div>
+            <a href="sale.html" class="slide-btn">ПЕРЕЙТИ</a>
+          </div>
+          <div class="slide-image">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80" alt="Мебель со скидкой" loading="eager"/>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-content slide-content--2">
+          <div class="slide-text">
+            <div class="slide-label">НОВАЯ КОЛЛЕКЦИЯ</div>
+            <div class="slide-title2">Декор для вашего дома</div>
+            <div class="slide-subtitle">От ведущих европейских фабрик</div>
+            <a href="category.html?cat=decor" class="slide-btn">СМОТРЕТЬ</a>
+          </div>
+          <div class="slide-image">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=80" alt="Декор дома" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-content slide-content--3">
+          <div class="slide-text">
+            <div class="slide-label">ЭКСКЛЮЗИВ</div>
+            <div class="slide-title2">Посуда и кухонная утварь</div>
+            <div class="slide-subtitle">Качество из Европы прямо на вашу кухню</div>
+            <a href="category.html?cat=dishes" class="slide-btn">КАТАЛОГ</a>
+          </div>
+          <div class="slide-image">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80" alt="Посуда" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slider dots -->
+    <div class="slider-dots">
+      <button class="dot active" onclick="goToSlide(0)" id="dot-0"></button>
+      <button class="dot" onclick="goToSlide(1)" id="dot-1"></button>
+      <button class="dot" onclick="goToSlide(2)" id="dot-2"></button>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY ICONS -->
+<section class="categories-icons" id="categories-section">
+  <div class="container">
+    <div class="icons-row">
+      <a href="category.html?cat=gifts" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <rect x="8" y="24" width="48" height="32" rx="2"/><path d="M24 24V16a8 8 0 0116 0v8"/><line x1="32" y1="36" x2="32" y2="44"/>
+          </svg>
+        </div>
+        <span>ПОДАРКИ</span>
+      </a>
+      <a href="category.html?cat=candles" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <path d="M20 8 Q24 4 28 8 Q32 4 36 8 Q40 4 44 8"/><line x1="32" y1="8" x2="32" y2="48"/><ellipse cx="32" cy="52" rx="10" ry="4"/>
+          </svg>
+        </div>
+        <span>СВЕЧИ</span>
+      </a>
+      <a href="category.html?cat=lighting" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <circle cx="32" cy="20" r="10"/><line x1="32" y1="30" x2="32" y2="54"/><line x1="20" y1="54" x2="44" y2="54"/>
+            <line x1="20" y1="44" x2="44" y2="44"/>
+          </svg>
+        </div>
+        <span>ОСВЕЩЕНИЕ</span>
+      </a>
+      <a href="category.html?cat=furniture" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <rect x="8" y="20" width="48" height="8" rx="2"/><rect x="12" y="28" width="8" height="24"/><rect x="44" y="28" width="8" height="24"/>
+            <rect x="16" y="36" width="32" height="4"/>
+          </svg>
+        </div>
+        <span>МЕБЕЛЬ</span>
+      </a>
+      <a href="category.html?cat=mirrors" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <path d="M8 8h48v48H8z"/><path d="M12 12h40v40H12z" stroke-dasharray="4 2"/>
+          </svg>
+        </div>
+        <span>ЗЕРКАЛА</span>
+      </a>
+      <a href="category.html?cat=vases" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <path d="M20 52V32a12 12 0 0124 0v20"/><ellipse cx="32" cy="52" rx="12" ry="4"/>
+            <path d="M32 20 Q36 14 40 8M32 20 Q28 14 24 8"/>
+          </svg>
+        </div>
+        <span>ВАЗОНЫ</span>
+      </a>
+      <a href="category.html?cat=dishes" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <path d="M16 8h32l4 8H12l4-8z"/><rect x="10" y="16" width="44" height="36" rx="2"/>
+            <line x1="24" y1="16" x2="24" y2="52"/><line x1="40" y1="16" x2="40" y2="52"/>
+          </svg>
+        </div>
+        <span>ПОСУДА</span>
+      </a>
+      <a href="category.html?cat=decor" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <polygon points="32,8 12,28 16,28 16,56 48,56 48,28 52,28"/><line x1="24" y1="56" x2="24" y2="40"/><line x1="40" y1="56" x2="40" y2="40"/>
+            <rect x="24" y="40" width="16" height="16"/>
+          </svg>
+        </div>
+        <span>ДЕКОР</span>
+      </a>
+      <a href="category.html?cat=textile" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <rect x="12" y="12" width="40" height="28" rx="2"/>
+            <path d="M24 40v10M40 40v10M16 50h32"/>
+            <line x1="20" y1="24" x2="44" y2="24"/><line x1="20" y1="32" x2="36" y2="32"/>
+          </svg>
+        </div>
+        <span>ТЕКСТИЛЬ</span>
+      </a>
+      <a href="category.html?cat=figurines" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <circle cx="32" cy="24" r="14"/><path d="M22 36l-6 16M42 36l6 16"/><line x1="20" y1="52" x2="44" y2="52"/>
+          </svg>
+        </div>
+        <span>СТАТУЭТКИ</span>
+      </a>
+      <a href="category.html?cat=frames" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <rect x="12" y="8" width="40" height="48" rx="2"/>
+            <rect x="18" y="14" width="28" height="22" rx="1"/>
+            <line x1="18" y1="44" x2="46" y2="44"/><line x1="18" y1="50" x2="34" y2="50"/>
+          </svg>
+        </div>
+        <span>ФОТОРАМКИ</span>
+      </a>
+      <a href="category.html?cat=jewelry" class="icon-item">
+        <div class="icon-img">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 64 64" fill="none" stroke="#27425b" stroke-width="2">
+            <circle cx="32" cy="16" r="8"/>
+            <path d="M16 32h32M16 32v20M48 32v20"/>
+            <circle cx="24" cy="36" r="3"/><circle cx="40" cy="36" r="3"/>
+          </svg>
+        </div>
+        <span>УКРАШЕНИЯ</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="products-section" id="new-arrivals">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-accent"></span>
+        <h2 class="section-title">НОВЫЕ ПОСТУПЛЕНИЯ</h2>
+      </div>
+    </div>
+    <div class="products-slider">
+      <button class="products-arrow arrow-prev" id="prev-btn" onclick="slideProducts(-1)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="products-track-wrapper">
+        <div class="products-track" id="products-track">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=pitcher-glass"><img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=400&q=80" alt="Кувшин стеклянный" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="product.html?id=pitcher-glass" class="product-name">Кувшин стеклянный прозрачный из боросиликата, который не бьётся</a>
+              <div class="product-footer">
+                <span class="product-price">2 100 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=lamp-floor"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Напольная лампа" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="product.html?id=lamp-floor" class="product-name">Напольная лампа J-LINE плетёная из ротанга натуральная высота 133 см</a>
+              <div class="product-footer">
+                <span class="product-price">13 530 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=chair-yellow"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Стул жёлтый" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="product.html?id=chair-yellow" class="product-name">Обеденный стул J-LINE плетёный в стиле бистро с открытой спинкой жёлтый</a>
+              <div class="product-footer">
+                <span class="product-price">14 960 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=chair-pink"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80" alt="Стул розовый" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="product.html?id=chair-pink" class="product-name">Обеденный стул J-LINE плетёный в стиле бистро с открытой розовой спинкой</a>
+              <div class="product-footer">
+                <span class="product-price">14 960 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=figurine-bulldog"><img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400&q=80" alt="Статуэтка бульдог" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="product.html?id=figurine-bulldog" class="product-name">Статуэтка бульдог J-LINE баскетболист белая с мячом спортивная высота 25 см</a>
+              <div class="product-footer">
+                <span class="product-price">2 920 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=vase-amadeus"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Ваза Amadeus" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="product.html?id=vase-amadeus" class="product-name">Ваза с ручкой AMADEUS с потёками краски высота 19 см Франция</a>
+              <div class="product-footer">
+                <span class="product-price">1 870 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=pitcher-glass"><img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80" alt="Ваза" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-name">Фоторамка J-LINE металлическая серебристого цвета 13x18 см Бельгия</a>
+              <div class="product-footer">
+                <span class="product-price">680 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <a href="product.html?id=lamp-floor"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4b3b8c?w=400&q=80" alt="Кольца для салфеток" loading="lazy"/></a>
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-name">Кольца для салфеток J-LINE из бамбука комплект из 6 натурального цвета</a>
+              <div class="product-footer">
+                <span class="product-price">880 ₴</span>
+                <button class="add-to-cart-btn">В корзину</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="products-arrow arrow-next" id="next-btn" onclick="slideProducts(1)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNERS -->
+<section class="promo-banners" id="promo">
+  <div class="container">
+    <div class="banners-grid">
+      <a href="category.html?cat=frames" class="banner-item banner-photos">
+        <div class="banner-content">
+          <h3>НЕ ЗАБЫВАЙТЕ ПЕЧАТАТЬ ФОТО С БЛИЗКИМИ И ЛЮБИМЫМИ ЛЮДЬМИ</h3>
+          <span class="banner-link">Смотреть фоторамки →</span>
+        </div>
+        <div class="banner-img-wrap">
+          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&q=80" alt="Фоторамки" loading="lazy"/>
+        </div>
+      </a>
+      <a href="category.html?cat=jewelry" class="banner-item banner-jewelry">
+        <div class="banner-content">
+          <h3>КРАСИВОЕ И УДОБНОЕ ХРАНЕНИЕ УКРАШЕНИЙ</h3>
+          <span class="banner-link">Смотреть коллекцию →</span>
+        </div>
+        <div class="banner-img-wrap">
+          <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&q=80" alt="Хранение украшений" loading="lazy"/>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MORE PRODUCTS -->
+<section class="products-section products-section--alt" id="more-products">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-accent"></span>
+        <h2 class="section-title">ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+      </div>
+    </div>
+    <div class="products-grid-4">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <a href="product.html?id=vase-amadeus"><img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?w=400&q=80" alt="Ваза Amadeus" loading="lazy"/></a>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=vase-amadeus" class="product-name">Ваза с ручкой AMADEUS с потёками краски высота 19 см Франция</a>
+          <div class="product-footer">
+            <span class="product-price">1 870 ₴</span>
+            <button class="add-to-cart-btn">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <a href="product.html?id=figurine-bulldog"><img src="https://images.unsplash.com/photo-1605460375648-278bcbd579a6?w=400&q=80" alt="Фоторамка" loading="lazy"/></a>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=figurine-bulldog" class="product-name">Статуэтка бульдог J-LINE баскетболист белая с мячом спортивная</a>
+          <div class="product-footer">
+            <span class="product-price">2 920 ₴</span>
+            <button class="add-to-cart-btn">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <a href="product.html?id=chair-yellow"><img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80" alt="Кольца для салфеток" loading="lazy"/></a>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=chair-yellow" class="product-name">Обеденный стул J-LINE плетёный в стиле бистро жёлтый</a>
+          <div class="product-footer">
+            <span class="product-price">14 960 ₴</span>
+            <button class="add-to-cart-btn">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <a href="product.html?id=lamp-floor"><img src="https://images.unsplash.com/photo-1636622433525-127afdf3662d?w=400&q=80" alt="Статуэтка" loading="lazy"/></a>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=lamp-floor" class="product-name">Напольная лампа J-LINE плетёная из ротанга натуральная высота 133 см</a>
+          <div class="product-footer">
+            <span class="product-price">13 530 ₴</span>
+            <button class="add-to-cart-btn">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="benefits-section" id="benefits">
+  <div class="container">
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <p>Продукция нашего салона для частных интерьеров, ресторанов и отелей</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <p>Мы привозим только самые актуальные коллекции</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+          </svg>
+        </div>
+        <p>Проконсультируем и поможем сделать подборку посуды и декора</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <p>Не беспокойтесь о хрупкости товара. Мы надёжно упакуем и отправим</p>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <p>Неважно где вы живёте! Доставка по всей Украине и ближнему зарубежью</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SECTION -->
+<section class="blog-section" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-accent"></span>
+        <h2 class="section-title">БЛОГ</h2>
+      </div>
+      <a href="#" class="see-all-link">ВСЕ ЗАПИСИ</a>
+    </div>
+    <div class="blog-empty">
+      <p>Скоро здесь появятся интересные статьи о декоре и интерьере.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME TEXT -->
+<section class="welcome-section" id="about-text">
+  <div class="container">
+    <h2 class="welcome-title">ДОБРО ПОЖАЛОВАТЬ В МИР СОВРЕМЕННОГО, КРАСИВОГО И КАЧЕСТВЕННОГО ДЕКОРА ДЛЯ ДОМА.</h2>
+    <p class="welcome-text">Наша страсть к красивым вещам не знает границ, и уже более семи лет мы создаём уют в ваших домах. Наша команда всегда следит за последними тенденциями в мире декора и посещает различные выставки, чтобы вы всегда могли найти у нас именно то, что будет радовать вас долгие годы.</p>
+    <p class="welcome-text">Мы благодарим всех наших клиентов за доверие и интерес ко всему, что мы делаем для вас!</p>
+  </div>
+</section>
+
+<!-- Shared footer (injected by components.js) -->
+<div id="site-footer-placeholder"></div>
+
+<script src="components.js"></script>
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  initCommonComponents('home');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Оформление заказа — Home UA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<div id="site-header-placeholder"></div>
+
+<main class="page-main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span>›</span>
+      <a href="cart.html">Корзина</a>
+      <span>›</span>
+      <span>Оформление заказа</span>
+    </nav>
+
+    <h1 class="checkout-main-title">Оформление заказа</h1>
+
+    <div class="checkout-layout">
+      <!-- Left: form -->
+      <div class="checkout-form-col">
+
+        <!-- Buyer details -->
+        <div class="checkout-block" id="order-success" style="display:none">
+          <div class="success-box">
+            <div class="success-icon">✓</div>
+            <h2>Заказ оформлен!</h2>
+            <p>Спасибо за покупку! Наш менеджер свяжется с вами в ближайшее время.</p>
+            <p>Номер заказа: <strong id="order-number">#1001</strong></p>
+            <a href="index.html" class="btn-continue-shopping" style="margin-top:16px;display:inline-block">На главную</a>
+          </div>
+        </div>
+
+        <div id="checkout-form-wrap">
+          <div class="checkout-block">
+            <div class="checkout-block-header">
+              <h2>Покупатель</h2>
+              <a href="login.html" class="already-registered">Я зарегистрирован</a>
+            </div>
+
+            <form id="checkout-form" onsubmit="submitOrder(event)">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>* Имя</label>
+                  <input type="text" id="co-firstname" placeholder="Имя" required/>
+                </div>
+                <div class="form-group">
+                  <label>* Фамилия</label>
+                  <input type="text" id="co-lastname" placeholder="Фамилия" required/>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>* Телефон</label>
+                  <input type="tel" id="co-phone" placeholder="+38 (___) ___-__-__" required/>
+                </div>
+                <div class="form-group">
+                  <label>* E-Mail</label>
+                  <input type="email" id="co-email" placeholder="E-Mail" required/>
+                </div>
+              </div>
+              <div class="form-group register-checkbox-wrap">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="co-register"/>
+                  <span>Регистрация</span>
+                  <span class="checkbox-hint">(создать аккаунт для отслеживания заказов)</span>
+                </label>
+              </div>
+              <div id="register-fields" style="display:none">
+                <div class="form-group">
+                  <label>* Пароль</label>
+                  <input type="password" id="co-password" placeholder="Придумайте пароль (мин. 6 символов)"/>
+                </div>
+                <div class="form-group">
+                  <label>* Подтвердите пароль</label>
+                  <input type="password" id="co-password2" placeholder="Повторите пароль"/>
+                </div>
+              </div>
+
+              <!-- Delivery -->
+              <div class="checkout-block-inner">
+                <h2>Способ Доставки</h2>
+                <div class="radio-list">
+                  <label class="radio-item">
+                    <input type="radio" name="delivery" value="branch" checked/>
+                    <span>Доставка в отделение Новой почты</span>
+                  </label>
+                  <label class="radio-item" id="branch-row">
+                    <span class="radio-sub-label">Номер отделения:</span>
+                    <input type="text" id="co-branch" placeholder="Введите город и № отделения"/>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="delivery" value="courier"/>
+                    <span>Доставка курьером Новой почты на адрес</span>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="delivery" value="parcel"/>
+                    <span>Доставка в почтомат Новой почты</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Payment -->
+              <div class="checkout-block-inner">
+                <h2>Способ Оплаты</h2>
+                <div class="radio-list">
+                  <label class="radio-item">
+                    <input type="radio" name="payment" value="cash" checked/>
+                    <span>Оплата наличными при получении</span>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="payment" value="online"/>
+                    <span>Оплата картой онлайн (LiqPay)</span>
+                  </label>
+                  <label class="radio-item">
+                    <input type="radio" name="payment" value="transfer"/>
+                    <span>Банковский перевод на реквизиты</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Comment -->
+              <div class="form-group">
+                <label>Комментарий к заказу</label>
+                <textarea id="co-comment" rows="3" placeholder="Дополнительные пожелания..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-place-order">ОФОРМИТЬ ЗАКАЗ</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: order summary -->
+      <div class="checkout-summary-col">
+        <div class="checkout-block summary-block">
+          <h2>Ваш заказ</h2>
+
+          <div class="summary-coupon">
+            <button class="coupon-toggle-small" onclick="toggleSumCoupon()">У вас есть купон? Используйте его! ▾</button>
+            <div id="sum-coupon-form" style="display:none" class="coupon-row">
+              <input type="text" id="sum-coupon-input" placeholder="Код купона..." class="coupon-input"/>
+              <button class="coupon-btn" onclick="applySumCoupon()">OK</button>
+            </div>
+            <div class="coupon-progress" id="free-delivery-bar">
+              <p class="free-del-hint">До бесплатной доставки ещё: <strong id="free-del-amount">–</strong></p>
+              <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            </div>
+          </div>
+
+          <div class="summary-items" id="summary-items"></div>
+
+          <div class="summary-totals">
+            <div class="totals-row">
+              <span>Подытог:</span>
+              <span id="sum-subtotal">0 ₴</span>
+            </div>
+            <div class="totals-row" id="sum-discount-row" style="display:none">
+              <span>Скидка:</span>
+              <span id="sum-discount" style="color:#c0392b">0 ₴</span>
+            </div>
+            <div class="totals-row totals-total">
+              <span>Итого:</span>
+              <span id="sum-total">0 ₴</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer-placeholder"></div>
+<script src="components.js"></script>
+<script>
+const FREE_DELIVERY_THRESHOLD = 5000;
+
+document.addEventListener('DOMContentLoaded', () => {
+  initCommonComponents('checkout');
+  renderSummary();
+
+  // Register toggle
+  document.getElementById('co-register').addEventListener('change', function() {
+    document.getElementById('register-fields').style.display = this.checked ? 'block' : 'none';
+  });
+
+  // Delivery type toggle
+  document.querySelectorAll('input[name="delivery"]').forEach(r => {
+    r.addEventListener('change', () => {
+      document.getElementById('branch-row').style.display =
+        r.value === 'branch' && r.checked ? 'flex' : 'none';
+    });
+  });
+});
+
+function renderSummary() {
+  const items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  const summaryEl = document.getElementById('summary-items');
+  let subtotal = 0;
+  summaryEl.innerHTML = '';
+  items.forEach(item => {
+    const line = item.price * item.qty;
+    subtotal += line;
+    const div = document.createElement('div');
+    div.className = 'summary-item';
+    div.innerHTML = `
+      <img src="${item.img}" alt="${item.name}"/>
+      <div class="summary-item-info">
+        <span class="summary-item-name">${item.name}</span>
+        <span class="summary-item-qty">Код: ${item.id}</span>
+        <span class="summary-item-label" style="background:#e53935;color:white;font-size:11px;padding:2px 6px;display:inline-block;margin-top:2px">Предзаказ</span>
+      </div>
+      <div class="summary-item-price">
+        <span>за 1 шт. ${item.price.toLocaleString('ru-RU')} ₴</span>
+        <strong>Всего ${line.toLocaleString('ru-RU')} ₴</strong>
+        <div class="summary-qty-row">
+          <button onclick="changeSummaryQty('${item.id}',-1)" class="cart-qty-btn">−</button>
+          <span>${item.qty}</span>
+          <button onclick="changeSummaryQty('${item.id}',1)" class="cart-qty-btn">+</button>
+          <button onclick="removeSummaryItem('${item.id}')" class="cart-remove-btn" title="Удалить">🗑</button>
+        </div>
+      </div>`;
+    summaryEl.appendChild(div);
+  });
+
+  const disc = parseFloat(localStorage.getItem('cartDiscount') || '0');
+  const total = subtotal - disc;
+  document.getElementById('sum-subtotal').textContent = subtotal.toLocaleString('ru-RU') + ' ₴';
+  document.getElementById('sum-total').textContent = total.toLocaleString('ru-RU') + ' ₴';
+  if (disc > 0) {
+    document.getElementById('sum-discount-row').style.display = 'flex';
+    document.getElementById('sum-discount').textContent = '-' + disc.toLocaleString('ru-RU') + ' ₴';
+  }
+
+  // Free delivery bar
+  const remaining = Math.max(0, FREE_DELIVERY_THRESHOLD - subtotal);
+  document.getElementById('free-del-amount').textContent = remaining > 0
+    ? remaining.toLocaleString('ru-RU') + ' ₴'
+    : 'бесплатно ✓';
+  const pct = Math.min(100, (subtotal / FREE_DELIVERY_THRESHOLD) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+}
+
+function changeSummaryQty(id, delta) {
+  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  const item = items.find(i => i.id === id);
+  if (item) item.qty = Math.max(1, item.qty + delta);
+  localStorage.setItem('cartItems', JSON.stringify(items));
+  const total = items.reduce((s, i) => s + i.qty, 0);
+  localStorage.setItem('cartCount', total);
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
+  renderSummary();
+}
+
+function removeSummaryItem(id) {
+  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  items = items.filter(i => i.id !== id);
+  localStorage.setItem('cartItems', JSON.stringify(items));
+  const total = items.reduce((s, i) => s + i.qty, 0);
+  localStorage.setItem('cartCount', total);
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
+  renderSummary();
+}
+
+function toggleSumCoupon() {
+  const f = document.getElementById('sum-coupon-form');
+  f.style.display = f.style.display === 'none' ? 'flex' : 'none';
+}
+
+function applySumCoupon() {
+  const code = document.getElementById('sum-coupon-input').value.trim().toUpperCase();
+  const COUPONS = { 'SALE10': 10, 'HOME15': 15 };
+  if (COUPONS[code]) {
+    let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const sub = items.reduce((s, i) => s + i.price * i.qty, 0);
+    localStorage.setItem('cartDiscount', Math.round(sub * COUPONS[code] / 100));
+    renderSummary();
+  }
+}
+
+function submitOrder(e) {
+  e.preventDefault();
+  const items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  if (items.length === 0) { alert('Корзина пуста!'); return; }
+  // Clear cart
+  localStorage.removeItem('cartItems');
+  localStorage.setItem('cartCount', '0');
+  localStorage.removeItem('cartDiscount');
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = '0');
+  // Show success
+  document.getElementById('checkout-form-wrap').style.display = 'none';
+  document.getElementById('order-success').style.display = 'block';
+  document.getElementById('order-number').textContent = '#' + (1000 + Math.floor(Math.random() * 9000));
+}
+</script>
+</body>
+</html>

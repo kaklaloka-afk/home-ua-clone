@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Корзина — Home UA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+<div id="site-header-placeholder"></div>
+
+<main class="page-main">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span>›</span>
+      <span>Корзина</span>
+    </nav>
+
+    <div class="page-layout">
+      <aside class="page-sidebar">
+        <div class="sidebar-block sidebar-recommended">
+          <h3 class="sidebar-title accent-title">ПОПУЛЯРНЫЕ</h3>
+          <div class="sidebar-products">
+            <a href="product.html?id=figurine-bulldog" class="sidebar-product">
+              <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=80&q=80" alt="Подсвечник"/>
+              <div class="sidebar-product-info">
+                <span class="sidebar-product-name">Подсвечник J-LINE стеклянный с...</span>
+                <span class="sidebar-product-price">825 ₴</span>
+              </div>
+            </a>
+            <a href="product.html?id=lamp-floor" class="sidebar-product">
+              <img src="https://images.unsplash.com/photo-1608632022061-6e3deac9a49f?w=80&q=80" alt="Аромадиффузор"/>
+              <div class="sidebar-product-info">
+                <span class="sidebar-product-name">Аромадиффузор J-LINE аромат восточный...</span>
+                <span class="sidebar-product-price">2 470 ₴</span>
+              </div>
+            </a>
+            <a href="product.html?id=vase-amadeus" class="sidebar-product">
+              <img src="https://images.unsplash.com/photo-1513506003901-1e6a35294aa7?w=80&q=80" alt="Ночник"/>
+              <div class="sidebar-product-info">
+                <span class="sidebar-product-name">Ночник AMADEUS в форме пакета...</span>
+                <span class="sidebar-product-price">2 710 ₴</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <article class="page-content">
+        <div class="content-header">
+          <span class="section-accent"></span>
+          <h1 class="content-title">КОРЗИНА</h1>
+        </div>
+
+        <!-- Empty cart -->
+        <div id="cart-empty" style="display:none" class="cart-empty">
+          <div class="cart-empty-icon">🛒</div>
+          <h2>Корзина пуста</h2>
+          <p>Добавьте товары в корзину, чтобы оформить заказ</p>
+          <a href="index.html" class="btn-continue">Продолжить покупки</a>
+        </div>
+
+        <!-- Cart table -->
+        <div id="cart-filled">
+          <table class="cart-table" id="cart-table">
+            <thead>
+              <tr>
+                <th>Изображение</th>
+                <th>Название товара</th>
+                <th>Модель</th>
+                <th>Количество</th>
+                <th>Цена за ед.</th>
+                <th>Всего</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cart-tbody">
+            </tbody>
+          </table>
+
+          <!-- Coupon -->
+          <div class="coupon-section">
+            <h3>У ВАС ЕСТЬ КУПОН? ИСПОЛЬЗУЙТЕ ЕГО!</h3>
+            <p>Выберите, если у вас есть код на скидку, вы желаете использовать бонусные баллы или оценить стоимость доставки.</p>
+            <div class="coupon-toggle" id="coupon-toggle" onclick="toggleCoupon()">
+              ИСПОЛЬЗОВАТЬ КУПОН
+            </div>
+            <div class="coupon-form" id="coupon-form" style="display:none">
+              <div class="coupon-row">
+                <input type="text" id="coupon-input" placeholder="Введите код купона..." class="coupon-input"/>
+                <button class="coupon-btn" onclick="applyCoupon()">ПРИМЕНИТЬ</button>
+              </div>
+              <div id="coupon-msg" class="coupon-msg"></div>
+            </div>
+          </div>
+
+          <!-- Totals -->
+          <div class="cart-totals" id="cart-totals">
+            <div class="totals-table">
+              <div class="totals-row">
+                <span>Подытог:</span>
+                <span id="cart-subtotal">0 ₴</span>
+              </div>
+              <div class="totals-row discount-row" id="discount-row" style="display:none">
+                <span>Скидка (купон):</span>
+                <span id="discount-amount" style="color:#c0392b">-0 ₴</span>
+              </div>
+              <div class="totals-row totals-total">
+                <span>Итого:</span>
+                <span id="cart-total">0 ₴</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="cart-actions">
+            <a href="index.html" class="btn-continue-shopping">ПРОДОЛЖИТЬ ПОКУПКИ</a>
+            <a href="checkout.html" class="btn-checkout">ОФОРМИТЬ</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer-placeholder"></div>
+<script src="components.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  initCommonComponents('cart');
+  renderCart();
+});
+
+function renderCart() {
+  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  if (items.length === 0) {
+    document.getElementById('cart-empty').style.display = 'block';
+    document.getElementById('cart-filled').style.display = 'none';
+    return;
+  }
+  document.getElementById('cart-empty').style.display = 'none';
+  document.getElementById('cart-filled').style.display = 'block';
+
+  const tbody = document.getElementById('cart-tbody');
+  tbody.innerHTML = '';
+  let subtotal = 0;
+  items.forEach((item, idx) => {
+    const lineTotal = item.price * item.qty;
+    subtotal += lineTotal;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><img src="${item.img}" alt="${item.name}" style="width:60px;height:60px;object-fit:cover;"/></td>
+      <td><a href="product.html?id=${item.id}" class="cart-item-name">${item.name}</a></td>
+      <td class="cart-item-model" style="color:#666;font-size:12px">${item.id}</td>
+      <td>
+        <div class="cart-qty-control">
+          <button onclick="changeQty(${idx},-1)" class="cart-qty-btn">−</button>
+          <span class="cart-qty-num">${item.qty}</span>
+          <button onclick="changeQty(${idx},1)" class="cart-qty-btn">+</button>
+        </div>
+      </td>
+      <td class="cart-price">${item.price.toLocaleString('ru-RU')} ₴</td>
+      <td class="cart-price"><strong>${lineTotal.toLocaleString('ru-RU')} ₴</strong></td>
+      <td><button onclick="removeItem(${idx})" class="cart-remove-btn" title="Удалить">🗑</button></td>`;
+    tbody.appendChild(tr);
+  });
+
+  let discount = parseFloat(localStorage.getItem('cartDiscount') || '0');
+  let total = subtotal - discount;
+  document.getElementById('cart-subtotal').textContent = subtotal.toLocaleString('ru-RU') + ' ₴';
+  document.getElementById('cart-total').textContent = total.toLocaleString('ru-RU') + ' ₴';
+  if (discount > 0) {
+    document.getElementById('discount-row').style.display = 'flex';
+    document.getElementById('discount-amount').textContent = '-' + discount.toLocaleString('ru-RU') + ' ₴';
+  }
+}
+
+function changeQty(idx, delta) {
+  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  items[idx].qty = Math.max(1, items[idx].qty + delta);
+  localStorage.setItem('cartItems', JSON.stringify(items));
+  const total = items.reduce((s, i) => s + i.qty, 0);
+  localStorage.setItem('cartCount', total);
+  renderCart();
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
+}
+
+function removeItem(idx) {
+  let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  items.splice(idx, 1);
+  localStorage.setItem('cartItems', JSON.stringify(items));
+  const total = items.reduce((s, i) => s + i.qty, 0);
+  localStorage.setItem('cartCount', total);
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
+  renderCart();
+}
+
+function toggleCoupon() {
+  const f = document.getElementById('coupon-form');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+}
+
+function applyCoupon() {
+  const code = document.getElementById('coupon-input').value.trim().toUpperCase();
+  const msg = document.getElementById('coupon-msg');
+  const COUPONS = { 'SALE10': 10, 'HOME15': 15, 'ДECO20': 20 };
+  if (COUPONS[code]) {
+    const pct = COUPONS[code];
+    let items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+    const subtotal = items.reduce((s, i) => s + i.price * i.qty, 0);
+    const disc = Math.round(subtotal * pct / 100);
+    localStorage.setItem('cartDiscount', disc);
+    msg.style.color = '#2e7d32';
+    msg.textContent = `✓ Купон применён! Скидка ${pct}% (${disc.toLocaleString('ru-RU')} ₴)`;
+    renderCart();
+  } else {
+    msg.style.color = '#c0392b';
+    msg.textContent = 'Купон не найден или уже использован.';
+  }
+}
+</script>
+</body>
+</html>
