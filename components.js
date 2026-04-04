@@ -29,7 +29,7 @@ function getHeaderHTML(activePage) {
           <div class="header-center">
             <div class="header-phone">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-              <a href="tel:+380675622882" style="color:inherit;text-decoration:none">+38 (067) 562-28-82</a>
+              <a href="tel:+79991234567" style="color:inherit;text-decoration:none">+7 (999) 123-45-67</a>
             </div>
           </div>
           <div class="header-right">
@@ -205,9 +205,9 @@ function initCommonComponents(activePage) {
     if (e.target.id === 'search-close' || e.target.id === 'search-overlay') {
       document.getElementById('search-overlay')?.classList.remove('open');
     }
-    if (e.target.id === 'callback-btn') alert('Позвоните нам: +38 (067) 562-28-82');
+    if (e.target.id === 'callback-btn') alert('Позвоните нам: +7 (999) 123-45-67');
     if (e.target.id === 'chat-widget' || e.target.closest('#chat-widget')) {
-      alert('Чат поддержки:\n+38 (067) 562-28-82\nEmail: home.ua.deco@gmail.com');
+      alert('Чат поддержки:\n+7 (999) 123-45-67\nEmail: home.ua.deco@gmail.com');
     }
   });
 
