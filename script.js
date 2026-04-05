@@ -40,7 +40,88 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderEl.addEventListener('mouseleave', startAutoSlide);
     }
   }
+  
+  if (document.getElementById('products-track')) {
+    renderHomeProducts();
+  }
 });
+
+// --- ДИНАМИЧЕСКИЙ РЕНДЕРИНГ ТОВАРОВ НА ГЛАВНОЙ ---
+function renderHomeProducts() {
+  const track = document.getElementById('products-track');
+  const grid = document.getElementById('popular-products-grid');
+  if (!PRODUCTS_DB) return;
+
+  const products = Object.values(PRODUCTS_DB);
+  
+  // Новинки (первые 8)
+  if (track) {
+    const newItems = products.slice(0, 8);
+    track.innerHTML = newItems.map(p => `
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <a href="product.html?id=${p.id}"><img src="${p.images[0]}" alt="${p.name}" loading="lazy"/></a>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=${p.id}" class="product-name">${p.name}</a>
+          <div class="product-footer">
+            <span class="product-price">${p.price.toLocaleString('ru-RU')} ₽</span>
+            <button class="add-to-cart-btn" onclick="addToCart('${p.id}')">В корзину</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Популярные (следующие 4 или случайные)
+  if (grid) {
+    const popularItems = products.slice(8, 12);
+    grid.innerHTML = popularItems.map(p => `
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <a href="product.html?id=${p.id}"><img src="${p.images[0]}" alt="${p.name}" loading="lazy"/></a>
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=${p.id}" class="product-name">${p.name}</a>
+          <div class="product-footer">
+            <span class="product-price">${p.price.toLocaleString('ru-RU')} ₽</span>
+            <button class="add-to-cart-btn" onclick="addToCart('${p.id}')">В корзину</button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+  
+  // Перезапуск анимаций для новых элементов
+  initScrollAnimations();
+}
+
+function addToCart(id) {
+  const p = PRODUCTS_DB[id];
+  if (!p) return;
+  let cart = JSON.parse(localStorage.getItem('cartItems') || '[]');
+  const exist = cart.find(i => i.id === id);
+  if (exist) exist.qty++;
+  else cart.push({ id: p.id, name: p.name, price: p.price, img: p.images[0], qty: 1 });
+  localStorage.setItem('cartItems', JSON.stringify(cart));
+  const total = cart.reduce((s, i) => s + i.qty, 0);
+  localStorage.setItem('cartCount', total);
+  document.querySelectorAll('.cart-badge').forEach(b => b.textContent = total);
+  
+  // Поиск кнопки для визуального фидбека
+  const btns = document.querySelectorAll(`button[onclick="addToCart('${id}')"]`);
+  btns.forEach(btn => {
+    const oldText = btn.textContent;
+    btn.textContent = '✓ В корзине';
+    btn.style.background = '#27425b';
+    btn.style.color = 'white';
+    setTimeout(() => {
+      btn.textContent = oldText;
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 1500);
+  });
+}
 
 // --- СЛАЙДЕР ТОВАРОВ ---
 let productOffset = 0;
@@ -133,8 +214,8 @@ window.addEventListener('scroll', () => {
   const header = document.querySelector('.site-header');
   if (header) {
     header.style.boxShadow = window.scrollY > 10
-      ? '0 4 px 20px rgba(39,66,91,0.15)'
-      : '0 2 px 8px rgba(0,0,0,0.08)';
+      ? '0 4px 20px rgba(39,66,91,0.15)'
+      : '0 2px 8px rgba(0,0,0,0.08)';
   }
 });
 
